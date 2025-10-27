@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Code, Cpu, Brain, Zap, TrendingUp, Shield, Radio, Droplet, Download, Send, Award, BookOpen, X, ChevronRight } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Code, Cpu, Brain, Zap, TrendingUp, Shield, Radio, Droplet, Download, Award, BookOpen, X, ChevronRight } from 'lucide-react';
 
 export default function Portfolio() {
   const [hoveredProject, setHoveredProject] = useState(null);
   const [selectedProject, setSelectedProject] = useState(null);
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [formStatus, setFormStatus] = useState('');
 
   const skills = [
     { 
@@ -63,27 +61,6 @@ export default function Portfolio() {
       year: "2024", 
       desc: "Fundamentals of Python programming and computational thinking",
       link: "https://www.coursera.org/account/accomplishments/certificate/ZQGPRP6RTRPS"
-    },
-    { 
-      name: "Master of Engineering in AI", 
-      org: "Illinois Institute of Technology", 
-      year: "2024-2025", 
-      desc: "Computer Vision & Control | Notable coursework: Distributed Systems, ML Infrastructure, Computer Vision, DSA, Cloud Computing",
-      link: "https://www.iit.edu"
-    },
-    { 
-      name: "Research Internship", 
-      org: "National Institute of Ocean Technology", 
-      year: "Jan 2023 - Apr 2023", 
-      desc: "Real-time underwater detection systems | Co-authored IEEE publication",
-      link: "https://ieeexplore.ieee.org/document/10421038"
-    },
-    { 
-      name: "Software Engineering Intern", 
-      org: "Wallet Wealth LLP", 
-      year: "Jul 2023 - Jul 2024", 
-      desc: "Production ML systems | Kubernetes & GCP microservices | CI/CD automation",
-      link: "https://github.com/Msundara19"
     }
   ];
 
@@ -96,7 +73,6 @@ export default function Portfolio() {
       concepts: ["Retrieval Augmented Generation", "Financial ML", "Prompt Engineering", "Risk Profiling"],
       icon: <Brain className="w-5 h-5" />,
       impact: "Reduced query response time by 40% while maintaining accuracy",
-      metrics: { primary: "-40%", secondary: "95%", tertiary: "1K+", labels: ["Speed", "Accuracy", "Queries"] },
       caseStudy: {
         challenge: "Traditional financial advisory systems couldn't provide personalized, real-time portfolio recommendations at scale. Needed to process complex ETF data and deliver accurate, contextual advice.",
         solution: "Built a RAG-based system combining vector embeddings of financial data with LLM reasoning. Implemented FastAPI microservices with efficient caching and parallel processing.",
@@ -112,7 +88,6 @@ export default function Portfolio() {
       concepts: ["Gradient Boosting", "Feature Engineering", "Parallel Processing", "Time Series"],
       icon: <TrendingUp className="w-5 h-5" />,
       impact: "Improved distribution efficiency by 25% for city-wide grids",
-      metrics: { primary: "-45%", secondary: "20", tertiary: "1M+", labels: ["Error", "Zones", "Points"] },
       caseStudy: {
         challenge: "City power grids needed accurate load forecasting to prevent blackouts and optimize energy distribution. Legacy systems had high error rates and couldn't scale.",
         solution: "Developed ensemble ML pipeline using Gradient Boosting and parallelized KNN. Implemented advanced feature engineering for temporal patterns and weather correlations.",
@@ -128,7 +103,6 @@ export default function Portfolio() {
       concepts: ["Convolutional Neural Networks", "PnP Pose Estimation", "Edge Computing", "Real-time Processing"],
       icon: <Shield className="w-5 h-5" />,
       impact: "Cut projected accident risk by 30% for fleet operations",
-      metrics: { primary: "94.3%", secondary: "30", tertiary: "50+", labels: ["Accuracy", "FPS", "Deployed"] },
       caseStudy: {
         challenge: "Commercial fleet operators needed real-time distraction detection to improve driver safety, but existing solutions were too expensive and required cloud connectivity.",
         solution: "Built lightweight CNN model optimized for Raspberry Pi edge deployment. Integrated GPIO alerts and real-time video processing at 30 FPS with robustness in varied lighting conditions.",
@@ -144,7 +118,6 @@ export default function Portfolio() {
       concepts: ["DSP", "Pitch Shifting", "Concurrent Systems", "Streaming Architecture"],
       icon: <Radio className="w-5 h-5" />,
       impact: "Supported 100+ concurrent users with 40% throughput increase",
-      metrics: { primary: "250K+", secondary: "100+", tertiary: "<100ms", labels: ["Streams", "Users", "Latency"] },
       caseStudy: {
         challenge: "Needed to build scalable voice transformation system that could handle real-time processing for entertainment applications without latency or quality degradation.",
         solution: "Designed streaming architecture with optimized DSP algorithms. Implemented concurrent processing with efficient memory management and REST API endpoints for low-latency delivery.",
@@ -160,7 +133,6 @@ export default function Portfolio() {
       concepts: ["Haar Cascade", "CLAHE", "Marine Robotics", "Real-time Detection"],
       icon: <Droplet className="w-5 h-5" />,
       impact: "Published research enabling marine resource identification",
-      metrics: { primary: "80%", secondary: "IEEE", tertiary: "2023", labels: ["Accuracy", "Published", "Year"] },
       caseStudy: {
         challenge: "Underwater environments have poor visibility and high noise, making traditional computer vision techniques ineffective for resource detection in marine research.",
         solution: "Combined CLAHE for contrast enhancement with Haar Cascade classifiers. Built GUI with Tkinter for real-time deployment, improving system robustness by 25% and reducing setup time by 40%.",
@@ -169,16 +141,6 @@ export default function Portfolio() {
       }
     }
   ];
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setFormStatus('sending');
-    setTimeout(() => {
-      setFormStatus('success');
-      setFormData({ name: '', email: '', message: '' });
-      setTimeout(() => setFormStatus(''), 3000);
-    }, 1000);
-  };
 
   const handleDownloadResume = () => {
     window.open('https://drive.google.com/file/d/1V2Rqe0azPmGoasvc94ePDU5VMdJt8W0q/view?usp=sharing', '_blank');
@@ -229,7 +191,7 @@ export default function Portfolio() {
           <div className="flex gap-3 text-sm text-slate-500 font-mono flex-wrap">
             <span className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
-              MEng AI for Computer Vision & Control @ Illinois Tech
+              Master of Eng in AI for Computer Vision & Control @ Illinois Tech
             </span>
             <span>•</span>
             <span>Chicago, IL</span>
@@ -269,20 +231,14 @@ export default function Portfolio() {
                           </radialGradient>
                         </defs>
                         <rect width="400" height="300" fill="url(#rag-bg)" />
-                        
-                        {/* Database */}
                         <circle cx="80" cy="150" r="60" fill="url(#db-glow)">
                           <animate attributeName="r" values="60;70;60" dur="3s" repeatCount="indefinite" />
                         </circle>
                         <circle cx="80" cy="150" r="30" fill="#7c3aed" stroke="#22d3ee" strokeWidth="3" />
                         <text x="80" y="155" textAnchor="middle" fill="#fbbf24" fontSize="10" fontFamily="monospace" fontWeight="bold">ETF DB</text>
-                        
-                        {/* Data flow to RAG */}
                         <path d="M 110 150 L 160 150" stroke="#22d3ee" strokeWidth="3" strokeDasharray="5,5">
                           <animate attributeName="stroke-dashoffset" values="0;-10" dur="1s" repeatCount="indefinite" />
                         </path>
-                        
-                        {/* RAG Model Brain */}
                         <rect x="170" y="110" width="80" height="80" rx="10" fill="#1e1b4b" stroke="#a78bfa" strokeWidth="3" />
                         <circle cx="195" cy="140" r="6" fill="#22d3ee">
                           <animate attributeName="fill" values="#22d3ee;#ec4899;#22d3ee" dur="2s" repeatCount="indefinite" />
@@ -292,18 +248,12 @@ export default function Portfolio() {
                         </circle>
                         <path d="M 185 160 Q 210 170 235 160" stroke="#fbbf24" strokeWidth="2" fill="none" />
                         <text x="210" y="185" textAnchor="middle" fill="#a78bfa" fontSize="9" fontFamily="monospace" fontWeight="bold">RAG</text>
-                        
-                        {/* Output to results */}
                         <path d="M 250 150 L 300 150" stroke="#10b981" strokeWidth="3" strokeDasharray="5,5">
                           <animate attributeName="stroke-dashoffset" values="0;-10" dur="1s" begin="0.5s" repeatCount="indefinite" />
                         </path>
-                        
-                        {/* Portfolio Analysis */}
                         <rect x="310" y="125" width="70" height="50" rx="5" fill="#7c3aed" stroke="#22d3ee" strokeWidth="3" />
                         <text x="345" y="145" textAnchor="middle" fill="#fbbf24" fontSize="8" fontFamily="monospace" fontWeight="bold">Portfolio</text>
                         <text x="345" y="158" textAnchor="middle" fill="#fbbf24" fontSize="8" fontFamily="monospace" fontWeight="bold">Analysis</text>
-                        
-                        {/* Floating data particles */}
                         {[0, 1, 2].map((i) => (
                           <circle key={i} r="3" fill="#22d3ee">
                             <animate attributeName="cx" values="110;160" dur="2s" begin={i * 0.7} repeatCount="indefinite" />
@@ -331,27 +281,19 @@ export default function Portfolio() {
                           </linearGradient>
                         </defs>
                         <rect width="400" height="300" fill="url(#grid-bg)" />
-                        
-                        {/* Grid lines */}
                         {[0,1,2,3,4].map(i => (
                           <line key={i} x1="50" y1={70 + i*40} x2="350" y2={70 + i*40} stroke="#475569" strokeWidth="1" opacity="0.3" />
                         ))}
-                        
-                        {/* Actual load line */}
                         <path d="M 50 200 Q 120 170 200 180 T 350 140" stroke="url(#actual)" strokeWidth="4" fill="none">
                           <animate attributeName="d" 
                             values="M 50 200 Q 120 170 200 180 T 350 140;M 50 200 Q 120 180 200 170 T 350 150;M 50 200 Q 120 170 200 180 T 350 140"
                             dur="4s" repeatCount="indefinite" />
                         </path>
                         <text x="360" y="145" fill="#fbbf24" fontSize="11" fontFamily="monospace" fontWeight="bold">Actual</text>
-                        
-                        {/* Predicted load line */}
                         <path d="M 50 200 Q 120 175 200 185 T 350 145" stroke="url(#predict)" strokeWidth="4" fill="none" strokeDasharray="8,4">
                           <animate attributeName="stroke-dashoffset" values="0;-12" dur="1s" repeatCount="indefinite" />
                         </path>
                         <text x="360" y="160" fill="#22d3ee" fontSize="11" fontFamily="monospace" fontWeight="bold">Predict</text>
-                        
-                        {/* Grid zone indicators */}
                         {[70, 170, 270, 350].map((x, i) => (
                           <g key={i}>
                             <circle cx={x} cy={190 - i*12} r="8" fill="#22d3ee" opacity="0.2">
@@ -362,7 +304,6 @@ export default function Portfolio() {
                             </circle>
                           </g>
                         ))}
-                        
                         <text x="200" y="35" textAnchor="middle" fill="#a78bfa" fontSize="14" fontFamily="monospace" fontWeight="bold">
                           20 Zones | 1M+ Points
                         </text>
@@ -382,20 +323,12 @@ export default function Portfolio() {
                           </radialGradient>
                         </defs>
                         <rect width="400" height="300" fill="url(#driver-bg)" />
-                        
-                        {/* Camera frame */}
                         <rect x="50" y="50" width="300" height="200" rx="5" fill="none" stroke="#a78bfa" strokeWidth="3" />
-                        
-                        {/* Driver silhouette */}
                         <circle cx="200" cy="120" r="30" fill="#312e81" stroke="#22d3ee" strokeWidth="3" />
                         <rect x="170" y="145" width="60" height="70" rx="8" fill="#312e81" stroke="#22d3ee" strokeWidth="3" />
-                        
-                        {/* Detection box */}
                         <rect x="150" y="85" width="100" height="140" rx="5" fill="none" stroke="#10b981" strokeWidth="4" strokeDasharray="10,5">
                           <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite" />
                         </rect>
-                        
-                        {/* Alert indicator */}
                         <circle cx="310" cy="80" r="35" fill="url(#alert)">
                           <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1s" repeatCount="indefinite" />
                         </circle>
@@ -403,15 +336,10 @@ export default function Portfolio() {
                           <animate attributeName="r" values="10;12;10" dur="1s" repeatCount="indefinite" />
                         </circle>
                         <text x="270" y="85" fill="#10b981" fontSize="12" fontFamily="monospace" fontWeight="bold">ALERT</text>
-                        
-                        {/* Metrics */}
                         <rect x="60" y="255" width="100" height="30" rx="5" fill="#7c3aed" opacity="0.9" />
                         <text x="110" y="275" textAnchor="middle" fill="#fbbf24" fontSize="12" fontFamily="monospace" fontWeight="bold">94.3% ACC</text>
-                        
                         <rect x="250" y="255" width="85" height="30" rx="5" fill="#ec4899" opacity="0.9" />
                         <text x="292" y="275" textAnchor="middle" fill="white" fontSize="12" fontFamily="monospace" fontWeight="bold">30 FPS</text>
-                        
-                        {/* Scanning lines */}
                         <line x1="50" y1="100" x2="350" y2="100" stroke="#22d3ee" strokeWidth="1" opacity="0.5">
                           <animate attributeName="y1" values="50;250;50" dur="3s" repeatCount="indefinite" />
                           <animate attributeName="y2" values="50;250;50" dur="3s" repeatCount="indefinite" />
@@ -438,35 +366,25 @@ export default function Portfolio() {
                           </linearGradient>
                         </defs>
                         <rect width="400" height="300" fill="url(#audio-bg)" />
-                        
-                        {/* Input label and wave */}
                         <text x="30" y="85" fill="#22d3ee" fontSize="11" fontFamily="monospace" fontWeight="bold">Input</text>
                         <path d="M 30 100 Q 80 70 130 100 T 230 100 T 370 100" stroke="url(#wave1)" strokeWidth="3" fill="none" opacity="0.9">
                           <animate attributeName="d" 
                             values="M 30 100 Q 80 70 130 100 T 230 100 T 370 100;M 30 100 Q 80 130 130 100 T 230 100 T 370 100;M 30 100 Q 80 70 130 100 T 230 100 T 370 100"
                             dur="2s" repeatCount="indefinite" />
                         </path>
-                        
-                        {/* Processing arrow */}
                         <path d="M 200 120 L 200 170" stroke="#a78bfa" strokeWidth="3">
                           <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite" />
                         </path>
                         <polygon points="200,170 195,160 205,160" fill="#a78bfa" />
-                        
-                        {/* Output label and wave */}
                         <text x="30" y="185" fill="#10b981" fontSize="11" fontFamily="monospace" fontWeight="bold">Output</text>
                         <path d="M 30 200 Q 80 165 130 200 T 230 200 T 370 200" stroke="url(#wave2)" strokeWidth="4" fill="none">
                           <animate attributeName="d" 
                             values="M 30 200 Q 80 165 130 200 T 230 200 T 370 200;M 30 200 Q 80 235 130 200 T 230 200 T 370 200;M 30 200 Q 80 165 130 200 T 230 200 T 370 200"
                             dur="1.8s" repeatCount="indefinite" />
                         </path>
-                        
-                        {/* Metrics box */}
                         <rect x="140" y="240" width="120" height="45" rx="8" fill="#312e81" stroke="#a78bfa" strokeWidth="3" />
                         <text x="200" y="260" textAnchor="middle" fill="#fbbf24" fontSize="11" fontFamily="monospace" fontWeight="bold">250K+ Streams</text>
                         <text x="200" y="275" textAnchor="middle" fill="#10b981" fontSize="10" fontFamily="monospace" fontWeight="bold">100+ Users</text>
-                        
-                        {/* Audio bars animation */}
                         {[50, 90, 130, 170, 210, 250, 290, 330, 370].map((x, i) => (
                           <rect key={i} x={x - 3} width="6" fill="#22d3ee" opacity="0.6">
                             <animate attributeName="y" values={`${150 - i * 5};${100};${150 - i * 5}`} dur="1s" begin={i * 0.1} repeatCount="indefinite" />
@@ -490,43 +408,29 @@ export default function Portfolio() {
                           </radialGradient>
                         </defs>
                         <rect width="400" height="300" fill="url(#underwater-bg)" />
-                        
-                        {/* Sonar waves */}
                         {[0,1,2,3,4].map(i => (
                           <ellipse key={i} cx="200" cy="280" rx={50 + i*30} ry={20 + i*15} fill="none" stroke="#0ea5e9" strokeWidth="1" opacity="0.3">
                             <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" begin={i * 0.4} repeatCount="indefinite" />
                           </ellipse>
                         ))}
-                        
-                        {/* Target detection */}
                         <circle cx="150" cy="120" r="40" fill="url(#sonar)">
                           <animate attributeName="r" values="40;60;40" dur="3s" repeatCount="indefinite" />
                         </circle>
                         <circle cx="150" cy="120" r="25" fill="#164e63" stroke="#22d3ee" strokeWidth="3" />
                         <text x="150" y="127" textAnchor="middle" fill="#22d3ee" fontSize="10" fontFamily="monospace" fontWeight="bold">TARGET</text>
-                        
-                        {/* Detection box */}
                         <rect x="130" y="100" width="40" height="40" rx="3" fill="none" stroke="#10b981" strokeWidth="3" strokeDasharray="5,3">
                           <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite" />
                         </rect>
-                        
-                        {/* Other objects */}
                         <circle cx="280" cy="180" r="15" fill="#0e7490" stroke="#06b6d4" strokeWidth="2" opacity="0.6" />
                         <circle cx="320" cy="140" r="12" fill="#0e7490" stroke="#06b6d4" strokeWidth="2" opacity="0.4" />
-                        
-                        {/* Scanning beam */}
                         <line x1="200" y1="280" x2="150" y2="120" stroke="#22d3ee" strokeWidth="2" opacity="0.4">
                           <animate attributeName="x2" values="100;300;100" dur="4s" repeatCount="indefinite" />
                           <animate attributeName="y2" values="120;120;120" dur="4s" repeatCount="indefinite" />
                         </line>
-                        
-                        {/* Metrics */}
                         <rect x="50" y="250" width="90" height="30" rx="5" fill="#164e63" stroke="#22d3ee" strokeWidth="2" />
                         <text x="95" y="270" textAnchor="middle" fill="#22d3ee" fontSize="11" fontFamily="monospace" fontWeight="bold">80% ACC</text>
-                        
                         <rect x="260" y="250" width="90" height="30" rx="5" fill="#164e63" stroke="#10b981" strokeWidth="2" />
                         <text x="305" y="270" textAnchor="middle" fill="#10b981" fontSize="10" fontFamily="monospace" fontWeight="bold">IEEE Pub</text>
-                        
                         <text x="200" y="35" textAnchor="middle" fill="#22d3ee" fontSize="13" fontFamily="monospace" fontWeight="bold">
                           Underwater Detection
                         </text>
@@ -734,19 +638,37 @@ export default function Portfolio() {
       </section>
 
       <footer className="border-t border-slate-800 bg-slate-950/50">
-        <div className="max-w-6xl mx-auto px-6 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="max-w-6xl mx-auto px-6 py-12">
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4 text-cyan-400">Get In Touch</h3>
+              <div className="space-y-3">
+                <a href="mailto:msridharansundaram@hawk.illinoistech.edu" className="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-colors">
+                  <Mail className="w-5 h-5" />
+                  <span>msridharansundaram@hawk.illinoistech.edu</span>
+                </a>
+                <a href="tel:312-404-7358" className="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-colors">
+                  <span className="text-lg">📞</span>
+                  <span>312-404-7358</span>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-4 text-cyan-400">Connect</h3>
+              <div className="flex gap-4">
+                <a href="https://github.com/Msundara19" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 hover:bg-slate-700 rounded-lg transition-all hover:scale-110">
+                  <Github className="w-6 h-6" />
+                </a>
+                <a href="https://www.linkedin.com/in/meenakshi-sridharan-89133b261/" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 hover:bg-slate-700 rounded-lg transition-all hover:scale-110">
+                  <Linkedin className="w-6 h-6" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="text-center pt-8 border-t border-slate-800">
             <p className="text-slate-500 text-sm">
               © 2025 Meenakshi Sridharan. Shipping AI systems that scale.
             </p>
-            <div className="flex gap-6 text-sm text-slate-400">
-              <a href="tel:312-404-7358" className="hover:text-cyan-400 transition-colors">
-                312-404-7358
-              </a>
-              <a href="mailto:msridharansundaram@hawk.illinoistech.edu" className="hover:text-cyan-400 transition-colors">
-                Email
-              </a>
-            </div>
           </div>
         </div>
       </footer>
