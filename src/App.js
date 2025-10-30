@@ -113,7 +113,7 @@ export default function Portfolio() {
     {
       name: "VoiceFun - Audio Transformation Engine",
       repo: "VoiceFun",
-      description: "Scalable audio processing system handling 250K+ concurrent streams. Built with optimized I/O and REST APIs for real-time voice transformation with 40% throughput increase.",
+      description: "Scalable audio processing system handling 2+ concurrent streams. Built with optimized I/O and REST APIs for real-time voice transformation with 40% throughput increase.",
       tags: ["Audio ML", "Signal Processing", "Scalability", "REST API"],
       concepts: ["DSP", "Pitch Shifting", "Concurrent Systems", "Streaming Architecture"],
       icon: <Radio className="w-5 h-5" />,
