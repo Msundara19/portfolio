@@ -76,29 +76,29 @@ export default function Portfolio() {
       caseStudy: {
         challenge: "Traditional financial advisory systems couldn't provide personalized, real-time portfolio recommendations at scale. Needed to process complex ETF data and deliver accurate, contextual advice.",
         solution: "Built a RAG-based system combining vector embeddings of financial data with LLM reasoning. Implemented FastAPI microservices with efficient caching and parallel processing.",
-        results: ["40% faster query response times", "95% user satisfaction rate", "Handled 1000+ daily queries", "Zero hallucination incidents in production"],
+        results: ["40% faster query response times", "95% user satisfaction rate", "Handled 10+ daily queries", "Zero hallucination incidents in production"],
         technical: ["Used FAISS for vector similarity search", "Implemented prompt engineering for financial accuracy", "Built custom risk profiling algorithms", "Deployed on Kubernetes with auto-scaling"]
       }
     },
     {
       name: "Smart Grid Load Forecasting",
       repo: "Power_Load_predictor",
-      description: "Enterprise ML system processing 1M+ data points across 20 grid zones. Achieved 45% error reduction using parallelized KNN and Gradient Boosting algorithms.",
+      description: "Enterprise ML system processing 100+ data points across 20 grid zones. Achieved 45% error reduction using parallelized KNN and Gradient Boosting algorithms.",
       tags: ["ML Pipeline", "Big Data", "Python", "Production"],
       concepts: ["Gradient Boosting", "Feature Engineering", "Parallel Processing", "Time Series"],
       icon: <TrendingUp className="w-5 h-5" />,
       impact: "Improved distribution efficiency by 25% for city-wide grids",
       caseStudy: {
         challenge: "City power grids needed accurate load forecasting to prevent blackouts and optimize energy distribution. Legacy systems had high error rates and couldn't scale.",
-        solution: "Developed ensemble ML pipeline using Gradient Boosting and parallelized KNN. Implemented advanced feature engineering for temporal patterns and weather correlations.",
-        results: ["45% reduction in prediction error", "25% improvement in distribution efficiency", "Processed 1M+ data points daily", "Prevented 12+ potential blackouts"],
+        solution: "Developed a prototype of an ensemble ML pipeline using Gradient Boosting and parallelized KNN. Implemented advanced feature engineering for temporal patterns and weather correlations.",
+        results: ["45% reduction in prediction error", "25% improvement in distribution efficiency", "Processed 10+ data points daily", "Prevented 2+ potential blackouts"],
         technical: ["Used XGBoost with custom loss functions", "Parallel processing with multiprocessing library", "Rolling window validation for time series", "Real-time pipeline with automated workflows"]
       }
     },
     {
       name: "Driver Distraction Detection System",
       repo: "Home-Appliance-Control",
-      description: "Real-time CNN-based detection achieving 94.3% accuracy on 10,000+ video frames. Deployed on Raspberry Pi with instant GPIO alerts for commercial drivers.",
+      description: "Real-time CNN-based detection achieving 94.3% accuracy on 100+ video frames. Deployed on Raspberry Pi with instant GPIO alerts for commercial drivers.",
       tags: ["Computer Vision", "Edge AI", "CNN", "IoT"],
       concepts: ["Convolutional Neural Networks", "PnP Pose Estimation", "Edge Computing", "Real-time Processing"],
       icon: <Shield className="w-5 h-5" />,
@@ -106,7 +106,7 @@ export default function Portfolio() {
       caseStudy: {
         challenge: "Commercial fleet operators needed real-time distraction detection to improve driver safety, but existing solutions were too expensive and required cloud connectivity.",
         solution: "Built lightweight CNN model optimized for Raspberry Pi edge deployment. Integrated GPIO alerts and real-time video processing at 30 FPS with robustness in varied lighting conditions.",
-        results: ["94.3% detection accuracy", "30 FPS real-time processing", "Works offline (edge-first)", "Deployed in 50+ commercial vehicles"],
+        results: ["94.3% detection accuracy", "30 FPS real-time processing", "Works offline (edge-first)", "Deployed in 2+ commercial vehicles"],
         technical: ["MobileNet-based CNN for efficient inference", "TensorFlow optimization for edge devices", "OpenCV for video pipeline", "Custom GPIO LED alert system"]
       }
     },
@@ -121,7 +121,7 @@ export default function Portfolio() {
       caseStudy: {
         challenge: "Needed to build scalable voice transformation system that could handle real-time processing for entertainment applications without latency or quality degradation.",
         solution: "Designed streaming architecture with optimized DSP algorithms. Implemented concurrent processing with efficient memory management and REST API endpoints for low-latency delivery.",
-        results: ["250K+ streams processed", "100+ concurrent users", "40% throughput improvement", "15% error rate reduction"],
+        results: ["2 streams processed", "1+ concurrent users", "40% throughput improvement", "15% error rate reduction"],
         technical: ["NumPy/SciPy for DSP operations", "Asyncio for concurrent processing", "FastAPI with streaming responses", "Modular pipelines for real-time effects"]
       }
     },
