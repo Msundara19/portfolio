@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Code, Cpu, Brain, Zap, TrendingUp, Shield, Radio, Droplet, Download, Award, BookOpen, X, ChevronRight } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Code, Brain, Zap, TrendingUp, Shield, Radio, Droplet, Download, Award, BookOpen, X, ChevronRight } from 'lucide-react';
 
 export default function Portfolio() {
   const [hoveredProject, setHoveredProject] = useState(null);
