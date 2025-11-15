@@ -143,7 +143,7 @@ export default function Portfolio() {
   ];
 
   const handleDownloadResume = () => {
-    window.open('https://drive.google.com/file/d/1kJ6xo2sUaaAy1421OF_fiKLMtIdaod1l/view?usp=drive_link', '_blank');
+    window.open('https://drive.google.com/file/d/1EwvtT8jnVXyuL-yh5GFr7NQGeF1BbhXQ/view?usp=drive_link', '_blank');
   };
 
   return (
