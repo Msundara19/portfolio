@@ -136,20 +136,27 @@ export default function Portfolio() {
     links: { paper: "https://ieeexplore.ieee.org/document/10421038", github: "https://github.com/Msundara19/Underwater-Resourse-Detection" }
   };
 
-  const writing = {
-    title: "Machines vs. us: A real conversation about artificial intelligence",
+  const writing = [
+  {
+    title: "Machines vs. Us: A Real Conversation About Artificial Intelligence",
     publication: "TechNews – Illinois Tech",
     date: "April 2025",
-    excerpt: "An opinion piece exploring why AI receives unwarranted hatred, addressing concerns about job displacement, hallucinations, privacy, and why machines can never truly replace humans.",
-    link: "https://technews.iit.edu/2025/04/10/machines-vs-us-a-real-conversation-about-artificial-intelligence/",
-
+    excerpt:
+      "An opinion piece exploring why AI receives unwarranted hatred, addressing concerns about job displacement, hallucinations, privacy, and why machines can never truly replace humans.",
+    link:
+      "https://technews.iit.edu/2025/04/10/machines-vs-us-a-real-conversation-about-artificial-intelligence/",
+  },
+  {
     title: "FPGA vs GPU: When Hardware Acceleration Actually Matters",
-    publication: "medium",
+    publication: "Medium",
     date: "December 2025",
-    excerpt: "Lessons from deploying a VGG network on both platforms — and why the results surprised me",
-    link: "Lessons from deploying a VGG network on both platforms — and why the results surprised me",
+    excerpt:
+      "Lessons from deploying a VGG network on both platforms — and why the results surprised me.",
+    link:
+      "https://medium.com/@your-username/fpga-vs-gpu-when-hardware-acceleration-actually-matters",
+  },
+];
 
-  };
 
   const education = [{ degree: "Master of Science in Artificial Intelligence", school: "Illinois Institute of Technology", period: "Sep 2024 – Dec 2025", logo: "IIT", courses: ["Hardware Acceleration for ML", "Secure ML", "Computer Vision", "Deep Learning","Machine Learning","Intro to Cybersecurity","Cloud Computing and Cloud native systems","AI in Smart Grids","Object Oriented Programming for Machine Learning"] }];
 
