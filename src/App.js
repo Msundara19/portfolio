@@ -33,6 +33,22 @@ export default function Portfolio() {
 
   const projects = [
     {
+      name: "TrustCart - AI E-Commerce Fraud Detection",
+      shortDesc: "Real-time fraud detection across multiple platforms",
+      description: "AI-powered fraud detection system for e-commerce using FastAPI and Groq LLM. Analyzes products across Google Shopping and eBay with statistical anomaly detection, achieving <5s response time and 95%+ precision.",
+      tags: ["FastAPI", "Groq LLM", "ML", "REST API"],
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800",
+      github: "https://github.com/Msundara19/Trustcart",
+      live: "https://web-production-e61ac.up.railway.app/",
+      icon: "🛡️",
+      caseStudy: {
+        challenge: "E-commerce platforms struggle with fraud detection at scale. Traditional rule-based systems miss sophisticated scams, while manual review is too slow for millions of listings.",
+        approach: "Built a hybrid system combining statistical anomaly detection with Groq LLM analysis. Used percentile-based price classification, outlier removal, and trusted seller recognition. Optimized LLM calls to top 5 risky items for sub-5 second response times.",
+        results: ["95%+ fraud detection precision", "Sub-5 second response time", "Multi-platform support (Google Shopping, eBay)", "Deployed on Railway with CI/CD"],
+        techStack: ["FastAPI", "Groq API (Llama 3.1)", "SerpAPI", "NumPy", "Tailwind CSS", "Railway"]
+      }
+    },
+    {
       name: "FPGA-Accelerated VGG Neural Network",
       shortDesc: "49.8x faster CNN inference on edge hardware",
       description: "ReducedVGG CNN for CIFAR-10 with 85.69% accuracy using INT16 quantization. Accelerated inference by 49.8x on Zynq-7020 FPGA.",
@@ -166,11 +182,32 @@ export default function Portfolio() {
     }
   ];
 
+  const certifications = [
+    {
+      title: "Structuring Machine Learning Projects",
+      issuer: "deeplearning.ai",
+      date: "May 2020",
+      link: "https://www.coursera.org/account/accomplishments/certificate/NA2FQV6TPVPD",
+      icon: "🎓"
+    },
+    {
+      title: "Python Data Structures",
+      issuer: "University of Michigan",
+      date: "Aug 2020",
+      link: "https://www.coursera.org/account/accomplishments/certificate/LTLD9M9JVHEH",
+      icon: "🐍"
+    }
+  ];
+
   const skills = {
-    "Languages": ["Python", "C++", "JavaScript", "Verilog", "VHDL", "SQL"],
-    "ML/AI": ["PyTorch", "TensorFlow", "LangChain", "OpenCV", "MediaPipe", "HuggingFace"],
-    "Tools": ["Docker", "FastAPI", "React", "AWS", "GitHub Actions", "Streamlit"],
-    "Hardware": ["FPGA (Vitis HLS)", "Raspberry Pi", "INT8/16 Quantization", "Edge Computing"]
+    "Languages": ["Python", "C++", "JavaScript", "SQL", "Verilog", "VHDL"],
+    "ML/AI": ["PyTorch", "TensorFlow", "Scikit-Learn", "Keras", "Deep Learning", "Neural Networks", "CNNs", "Model Training"],
+    "LLMs & GenAI": ["LangChain", "LangGraph", "RAG", "Prompt Engineering", "APIs", "HuggingFace Transformers"],
+    "Computer Vision": ["OpenCV", "MediaPipe", "Image Segmentation", "Object Detection", "Image Processing"],
+    "MLOps": ["Docker", "FastAPI", "Streamlit", "Flask", "Model Serving", "REST APIs", "WebSocket", "Model Deployment"],
+    "Cloud": ["AWS (EC2, S3, Lambda)", "Vercel", "Git/GitHub"],
+    "Data": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter", "Data Pipeline", "Feature Engineering", "Data Preprocessing"],
+    "Hardware": ["FPGA (Vitis HLS, PYNQ)", "Raspberry Pi", "Model Quantization", "Hardware Acceleration"]
   };
 
   if (isLoading) {
@@ -216,7 +253,7 @@ export default function Portfolio() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6">Hi, I'm Meenakshi 👋</h1>
             <p className={`text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 ${darkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>AI Enthusiast blending logic, empathy, and code to make machines a little more human.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start">
-              <a href="/resume.pdf" target="_blank" className={`px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-medium transition-all hover:scale-105 text-sm sm:text-base ${darkMode ? 'bg-white text-black hover:bg-zinc-200' : 'bg-zinc-900 text-white hover:bg-zinc-800'}`}>View Resume</a>
+              <a href="https://drive.google.com/file/d/1zMsqmJKWkRBS8dQZmFEz3pOVWc3cMdKH/view" target="_blank" rel="noopener noreferrer" className={`px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-medium transition-all hover:scale-105 text-sm sm:text-base ${darkMode ? 'bg-white text-black hover:bg-zinc-200' : 'bg-zinc-900 text-white hover:bg-zinc-800'}`}>View Resume</a>
               <button onClick={copyEmail} className={`px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-medium transition-all border-2 hover:scale-105 flex items-center justify-center gap-2 text-sm sm:text-base ${darkMode ? 'border-zinc-700 hover:border-zinc-500' : 'border-zinc-300 hover:border-zinc-400'}`}>
                 {copied ? <><svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/></svg>Copied!</> : <><svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>Copy Email</>}
               </button>
@@ -312,6 +349,25 @@ export default function Portfolio() {
                 <div className="flex flex-wrap gap-1.5 sm:gap-2">{edu.courses.map((course, i) => <span key={i} className={`px-2 sm:px-3 py-0.5 sm:py-1 rounded-lg text-xs ${darkMode ? 'bg-zinc-800 text-zinc-400' : 'bg-white text-zinc-600 border border-zinc-200'}`}>{course}</span>)}</div>
               </div>
             ))}
+          </div>
+          {/* Certifications */}
+          <div className="mt-8 sm:mt-12">
+            <h2 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8">Certifications</h2>
+            <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
+              {certifications.map((cert, idx) => (
+                <a key={idx} href={cert.link} target="_blank" rel="noopener noreferrer" className={`block p-5 sm:p-6 rounded-2xl sm:rounded-3xl border transition-all hover:scale-[1.02] ${darkMode ? 'bg-zinc-900/30 border-zinc-800 hover:border-zinc-700' : 'bg-zinc-50 border-zinc-200 hover:border-zinc-300'}`}>
+                  <div className="flex items-start gap-3 sm:gap-4">
+                    <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-xl sm:text-2xl flex-shrink-0 ${darkMode ? 'bg-zinc-800' : 'bg-zinc-200'}`}>{cert.icon}</div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-bold text-sm sm:text-base mb-1 break-words">{cert.title}</h3>
+                      <p className={`text-xs sm:text-sm mb-1 ${darkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>{cert.issuer}</p>
+                      <p className={`text-xs ${darkMode ? 'text-zinc-600' : 'text-zinc-400'}`}>{cert.date}</p>
+                    </div>
+                    <svg className={`w-4 h-4 flex-shrink-0 ${darkMode ? 'text-zinc-600' : 'text-zinc-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
