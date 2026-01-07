@@ -28,7 +28,16 @@ export default function Portfolio() {
   const scrollToSection = (sectionId) => {
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
-    if (element) element.scrollIntoView({ behavior: 'smooth' });
+    if (element) {
+      const navbarHeight = 100; // Account for bottom navbar
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
   const projects = [
@@ -300,7 +309,7 @@ export default function Portfolio() {
       </section>
 
       {/* Experience Section - Role before company */}
-      <section id="experience" className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 relative z-10">
+      <section id="experience" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-xl sm:text-2xl font-bold mb-8 sm:mb-12">Work Experience</h2>
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
@@ -372,7 +381,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 relative z-10">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-xl sm:text-2xl font-bold mb-8 sm:mb-12">Skills</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -386,7 +395,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section id="projects" className="py-16 sm:py-20 md:py-32 px-4 sm:px-6 relative z-10">
+      <section id="projects" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 relative z-10">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-xl sm:text-2xl font-bold mb-2">Projects</h2>
           <p className={`text-sm sm:text-base md:text-lg mb-8 sm:mb-12 ${darkMode ? 'text-zinc-500' : 'text-zinc-400'}`}>Click any project to view the case study</p>
@@ -436,7 +445,7 @@ export default function Portfolio() {
         </div>
       )}
 
-      <footer className={`py-12 sm:py-16 px-4 sm:px-6 border-t relative z-10 ${darkMode ? 'border-zinc-900' : 'border-zinc-200'}`}>
+      <footer className={`py-12 sm:py-16 px-4 sm:px-6 border-t relative z-10 pb-24 sm:pb-28 ${darkMode ? 'border-zinc-900' : 'border-zinc-200'}`}>
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left"><h3 className="text-xl sm:text-2xl font-bold mb-2">Let's build something amazing</h3><p className={`text-sm sm:text-base ${darkMode ? 'text-zinc-500' : 'text-zinc-400'}`}>Always open to new opportunities.</p></div>
@@ -451,7 +460,6 @@ export default function Portfolio() {
           </div>
         </div>
       </footer>
-      <div className="h-20 sm:h-24"></div>
     </div>
   );
 }
