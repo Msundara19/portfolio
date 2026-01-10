@@ -163,7 +163,7 @@ export default function Portfolio() {
 
   const education = [
     {
-      degree: "Master of Science in Artificial Intelligence",
+      degree: "Master of Engineering in Artificial Intelligence for Computer Vision",
       school: "Illinois Institute of Technology",
       period: "Sep 2024 - Dec 2025",
       courses: ["Hardware Acceleration for ML", "Secure ML", "Computer Vision", "Deep Learning", "Machine Learning", "Intro to Cybersecurity", "Cloud Computing and Cloud native systems", "AI in Smart Grids", "Object Oriented Programming for Machine Learning"],
@@ -296,7 +296,7 @@ export default function Portfolio() {
                 I'm fascinated by the gap between what AI can do in a Jupyter notebook and what it can do in production. Early in my journey, I learned that impressive accuracy means nothing if users can't actually deploy your system. That insight has driven everything since.
               </p>
               <p className={`text-sm leading-relaxed mb-3 ${darkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>
-                Now pursuing my M.Eng at Illinois Tech, I build AI systems that work under real-world pressure. I've deployed a fraud detection API processing thousands of daily requests with sub-5 second latency, built a wound monitoring platform delivering clinical-grade analysis in real-time, created a financial advisory system routing between multiple LLMs for optimal responses, and accelerated neural networks 50× on resource-constrained FPGA hardware. My work has been published in IEEE and deployed to production environments serving real users.
+                Pursued Master of Engineering in Artificial Intelligence at Illinois Tech, I build AI systems that work under real-world pressure. I've deployed a fraud detection API processing thousands of daily requests with sub-5 second latency, built a wound monitoring platform delivering clinical-grade analysis in real-time, created a financial advisory system routing between multiple LLMs for optimal responses, and accelerated neural networks 50× on resource-constrained FPGA hardware. My work has been published in IEEE and deployed to production environments serving real users.
               </p>
               <p className={`text-sm leading-relaxed ${darkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>
                 What drives me are the constraints themselves. The strict latency requirements. The limited hardware budgets. The scalability challenges. These aren't obstacles—they're what make the engineering interesting. When you can't just add more compute, you have to build something truly efficient. That's where innovation happens, and that's what keeps me motivated.
