@@ -58,12 +58,28 @@ export default function Portfolio() {
       }
     },
     {
+      name: "MediTrack v2.0 - AI Wound Healing Monitor",
+      shortDesc: "Clinical-grade wound analysis with multi-patient tracking",
+      description: "Full-stack healthcare application classifying 7 wound types with 6-factor computer vision pipeline. Real-time wound healing monitor using OpenCV and multi-provider LLMs with sub-5s latency.",
+      tags: ["OpenCV", "LLM", "Next.js", "Computer Vision"],
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800",
+      github: "https://github.com/Msundara19/meditrack-v2",
+      live: "https://meditrack-v2.vercel.app/",
+      icon: "🏥",
+      caseStudy: {
+        challenge: "Post-surgical wound monitoring requires frequent clinical visits, increasing healthcare costs. Patients lack tools to track healing progress at home with clinical-grade accuracy, leading to delayed complication detection.",
+        approach: "Built full-stack production application with 6-factor computer vision pipeline using HSV/LAB segmentation for wound boundary detection, color analysis, and tissue classification. Integrated multi-provider LLMs (Groq, Gemini) for natural language wound reports. Implemented multi-patient tracking with automatic healing score calculation and historical trend analysis.",
+        results: ["7 wound type classification", "Sub-5 second end-to-end latency", "6-factor analysis (size, color, tissue, exudate, edges, surrounding)", "Multi-patient tracking with healing scores"],
+        techStack: ["Next.js", "OpenCV", "Groq API", "Gemini API", "Vercel", "HSV/LAB Processing", "Python", "FastAPI"]
+      }
+    },
+    {
       name: "FPGA-Accelerated VGG Neural Network",
       shortDesc: "49.8x faster CNN inference on edge hardware",
       description: "ReducedVGG CNN for CIFAR-10 with 85.69% accuracy using INT16 quantization. Accelerated inference by 49.8x on Zynq-7020 FPGA.",
       tags: ["FPGA", "Vitis HLS", "PyTorch", "Quantization"],
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800",
-      github: "https://github.com/Msundara19/ECE588_FinalProject",
+      github: "https://github.com/Msundara19/fpga_cnn_accelerator",
       icon: "⚡",
       caseStudy: {
         challenge: "CNNs demand significant computational resources. Edge devices need real-time inference without compromising accuracy—a challenge GPUs can't solve alone due to power constraints.",
@@ -73,53 +89,33 @@ export default function Portfolio() {
       }
     },
     {
-      name: "MediTrack - AI Wound Healing Monitor",
-      shortDesc: "Hack With Chicago 2.0 - AI medical imaging",
-      description: "Real-time wound healing monitor using OpenCV and Pathway streaming. Won Hack With Chicago 2.0 with clinical-grade image analysis for post-surgical care.",
-      tags: ["OpenCV", "LLM", "Streamlit", "Real-time"],
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800",
-      github: "https://github.com/Msundara19/MediTrack",
-      live: "https://meditrack-v1.streamlit.app/",
-      icon: "🏥",
-      hackathon: {
-        name: "Hack With Chicago 2.0",
-        location: "Illinois Tech",
-        link: "https://devpost.com/software/meditrack-wound-healing-tracker"
-      },
-      caseStudy: {
-        challenge: "Post-surgical wound monitoring requires frequent clinical visits, increasing healthcare costs. Patients lack tools to track healing progress at home, leading to delayed complication detection.",
-        approach: "Built real-time image processing pipeline with Pathway streaming framework. Implemented edge detection, contour analysis, and color segmentation for wound assessment. Integrated Groq LLM for natural language reports. Used Firebase for data persistence.",
-        results: ["Won Hack With Chicago 2.0", "Real-time wound analysis (<2s)", "Automated healing progress tracking", "95%+ accuracy in wound boundary detection"],
-        techStack: ["OpenCV", "Pathway", "Groq LLM", "Streamlit", "Firebase", "Python"]
-      }
-    },
-    {
       name: "Wallet Wealth - LLM Financial Advisor",
-      shortDesc: "Full-stack AI wealth management platform",
-      description: "RAG-powered financial advisor with real-time market data. Built during internship at Wallet Wealth LLP—now serving 500+ users with personalized investment recommendations.",
+      shortDesc: "Agentic AI platform with sub-3s response times",
+      description: "RAG-powered financial advisor with real-time market data and multi-provider LLM routing. Production agentic AI platform delivering personalized investment recommendations with conversational memory.",
       tags: ["React", "FastAPI", "LangChain", "RAG"],
       image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800",
-      github: "https://github.com/Msundara19/Wallet-Wealth-Advisor",
+      github: "https://github.com/Msundara19/LLM-wealth-advisor",
+      live: "https://llm-wealth-advisor.vercel.app/",
       icon: "💰",
       caseStudy: {
-        challenge: "Retail investors lack access to personalized financial advice. Traditional wealth management is expensive and inaccessible for small portfolios. Generic robo-advisors fail to understand individual risk profiles.",
-        approach: "Developed RAG system with vector database for financial knowledge retrieval. Integrated real-time market data APIs. Built React frontend with responsive design. Implemented FastAPI backend with LangChain for LLM orchestration. Added user authentication and portfolio tracking.",
-        results: ["500+ active users", "Real-time market data integration", "Personalized investment recommendations", "Full-stack deployment (React + FastAPI)"],
-        techStack: ["React", "FastAPI", "LangChain", "OpenAI API", "PostgreSQL", "Docker", "Nginx"]
+        challenge: "Retail investors lack access to personalized financial advice. Traditional wealth management is expensive and inaccessible for small portfolios. Generic robo-advisors fail to understand individual risk profiles and market context.",
+        approach: "Developed production agentic AI platform using LangChain with multi-provider LLM routing for optimal performance. Implemented RAG-based retrieval from financial knowledge base. Built responsive React frontend with real-time streaming responses. Added JWT authentication, conversational memory, and portfolio tracking. Deployed on Vercel with FastAPI backend.",
+        results: ["Sub-3 second response times", "Multi-provider LLM routing", "RAG-based financial knowledge retrieval", "Full-stack deployment with authentication"],
+        techStack: ["React", "FastAPI", "LangChain", "OpenAI API", "Groq API", "PostgreSQL", "JWT", "Vercel"]
       }
     },
     {
       name: "Gesture-Controlled IoT for Accessibility",
-      shortDesc: "95%+ accuracy gesture recognition on $40 hardware",
-      description: "MediaPipe-based gesture control system for IoT devices. Enables touchless home automation on Raspberry Pi—addressing accessibility needs for motor-impaired users.",
+      shortDesc: "95%+ accuracy gesture recognition with 33ms latency",
+      description: "MediaPipe-based gesture control system for IoT devices. Enables touchless home automation on Raspberry Pi—addressing accessibility needs for motor-impaired users with real-time performance.",
       tags: ["MediaPipe", "Raspberry Pi", "Edge AI", "IoT"],
       image: "https://images.unsplash.com/photo-1593376893114-1aed528d80cf?w=800",
-      github: "https://github.com/Msundara19/Gesture-IoT",
+      github: "https://github.com/Msundara19/Home_appliance_control",
       icon: "🤚",
       caseStudy: {
-        challenge: "Motor-impaired individuals struggle with traditional IoT controls. Existing gesture systems require expensive hardware or cloud connectivity, raising privacy concerns.",
-        approach: "Deployed MediaPipe on Raspberry Pi 4 for on-device inference. Implemented custom gesture recognition with 15 control commands. Optimized pipeline for real-time performance (<100ms latency). Integrated with MQTT for IoT device control.",
-        results: ["95%+ gesture recognition accuracy", "Real-time inference on $40 hardware", "Privacy-first (no cloud dependency)", "15 custom gestures for home automation"],
+        challenge: "Motor-impaired individuals struggle with traditional IoT controls. Existing gesture systems require expensive hardware or cloud connectivity, raising privacy concerns and adding latency.",
+        approach: "Deployed MediaPipe on Raspberry Pi 4 for on-device inference. Implemented custom gesture recognition with 15 control commands for voice assistants and home automation. Optimized pipeline for real-time performance with sub-100ms latency. Integrated with MQTT for IoT device control. Privacy-first design with no cloud dependency.",
+        results: ["95%+ gesture recognition accuracy", "33ms median latency", "Privacy-first (no cloud dependency)", "15 custom gestures for home automation"],
         techStack: ["MediaPipe", "Raspberry Pi 4", "OpenCV", "MQTT", "Python", "TensorFlow Lite"]
       }
     },
@@ -147,8 +143,8 @@ export default function Portfolio() {
       period: "Jan 2023 - Apr 2023",
       description: "Built underwater object detection pipeline using CLAHE preprocessing and AdaBoost, achieving 80% accuracy on 500+ images.",
       achievements: ["80% detection accuracy", "500+ images processed", "IEEE Published"],
-      github: "https://github.com/Msundara19/Underwater-Resource-Detection",
-      paper: "https://ieeexplore.ieee.org/document/10197626",
+      github: "https://github.com/Msundara19/Underwater-Resourse-Detection",
+      paper: "https://ieeexplore.ieee.org/document/10421038",
       icon: "🌊"
     }
   ];
@@ -160,14 +156,14 @@ export default function Portfolio() {
       date: "July 2023",
       description: "Developed real-time underwater detection system achieving 80% accuracy using Haar Cascade classifiers enhanced with CLAHE preprocessing.",
       highlights: ["Novel CLAHE preprocessing pipeline", "Optimized Haar Cascade training", "GUI reducing setup time by 40%", "25% robustness improvement"],
-      link: "https://ieeexplore.ieee.org/document/10197626",
-      github: "https://github.com/Msundara19/Underwater-Resource-Detection"
+      link: "https://ieeexplore.ieee.org/document/10421038",
+      github: "https://github.com/Msundara19/Underwater-Resourse-Detection"
     }
   ];
 
   const education = [
     {
-      degree: "Master of Engineering in Artificial Intelligence",
+      degree: "Master of Science in Artificial Intelligence",
       school: "Illinois Institute of Technology",
       period: "Sep 2024 - Dec 2025",
       courses: ["Hardware Acceleration for ML", "Secure ML", "Computer Vision", "Deep Learning", "Machine Learning", "Intro to Cybersecurity", "Cloud Computing and Cloud native systems", "AI in Smart Grids", "Object Oriented Programming for Machine Learning"],
@@ -199,14 +195,14 @@ export default function Portfolio() {
       title: "Structuring Machine Learning Projects",
       issuer: "deeplearning.ai",
       date: "May 2020",
-      link: "https://www.coursera.org/account/accomplishments/certificate/YOUR_CERT_ID",
+      link: "https://coursera.org/share/91b974c5adb09c83631a9d6f3562dd15",
       icon: "🎓"
     },
     {
       title: "Python Data Structures",
       issuer: "University of Michigan",
       date: "Aug 2020",
-      link: "https://www.coursera.org/account/accomplishments/certificate/LTLD9M9JVHEH",
+      link: "https://coursera.org/share/7a5285796de00639e2fd5a930a302bb7",
       icon: "🐍"
     }
   ];
@@ -289,15 +285,21 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Compact About Section */}
+      {/* Compact About Section - UPDATED */}
       <section className={`px-4 py-6 sm:py-8 border-t relative z-10 ${darkMode ? 'border-zinc-900' : 'border-zinc-200'}`}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-xl sm:text-2xl font-bold mb-3">Meenakshi</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <h3 className="font-semibold text-base mb-2">About</h3>
+              <p className={`text-sm leading-relaxed mb-3 ${darkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>
+                I'm fascinated by the gap between what AI can do in a Jupyter notebook and what it can do in production. Early in my journey, I learned that impressive accuracy means nothing if users can't actually deploy your system. That insight has driven everything since.
+              </p>
+              <p className={`text-sm leading-relaxed mb-3 ${darkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>
+                Now pursuing my M.Eng at Illinois Tech, I build AI systems that work under real-world pressure. I've deployed a fraud detection API processing thousands of daily requests with sub-5 second latency, built a wound monitoring platform delivering clinical-grade analysis in real-time, created a financial advisory system routing between multiple LLMs for optimal responses, and accelerated neural networks 50× on resource-constrained FPGA hardware. My work has been published in IEEE and deployed to production environments serving real users.
+              </p>
               <p className={`text-sm leading-relaxed ${darkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>
-                Pursuing M.Eng in AI at Illinois Institute of Technology. I love working with robust ML models and deploying them on resource-constrained hardware like FPGAs. Passionate about building AI systems that address real-world constraints.
+                What drives me are the constraints themselves. The strict latency requirements. The limited hardware budgets. The scalability challenges. These aren't obstacles—they're what make the engineering interesting. When you can't just add more compute, you have to build something truly efficient. That's where innovation happens, and that's what keeps me motivated.
               </p>
             </div>
             
