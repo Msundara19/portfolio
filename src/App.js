@@ -177,7 +177,7 @@ export default function Portfolio() {
       publication: "TechNews - Illinois Tech",
       date: "April 2025",
       description: "An opinion piece exploring why AI receives unwarranted hatred, addressing concerns about job displacement, hallucinations, privacy, and why machines can never truly replace humans.",
-      link: "#",
+      link: "https://technews.iit.edu/2025/04/10/machines-vs-us-a-real-conversation-about-artificial-intelligence/",
       icon: "✍️"
     },
     {
@@ -185,7 +185,7 @@ export default function Portfolio() {
       publication: "Medium",
       date: "December 2025",
       description: "Lessons from deploying a VGG network on both platforms - and why the results surprised me.",
-      link: "#",
+      link: "https://medium.com/@msridharansundaram/fpga-vs-gpu-when-hardware-acceleration-actually-matters-bd91e594c854",
       icon: "🔧"
     }
   ];
@@ -242,9 +242,9 @@ export default function Portfolio() {
       <div className="fixed w-96 h-96 rounded-full pointer-events-none z-0" style={{ background: darkMode ? 'radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%)' : 'radial-gradient(circle, rgba(0,0,0,0.02) 0%, transparent 70%)', left: mousePosition.x - 192, top: mousePosition.y - 192 }} />
       <div className="fixed inset-0 pointer-events-none z-0"><div className={`absolute inset-0 ${darkMode ? 'opacity-[0.02]' : 'opacity-[0.03]'}`} style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)', backgroundSize: '80px 80px' }} /></div>
 
-      {/* Compact Navigation */}
-      <nav className="fixed bottom-3 sm:bottom-4 left-1/2 transform -translate-x-1/2 z-50 px-4 w-full max-w-md">
-        <div className={`flex items-center gap-0.5 px-1.5 sm:px-2 py-1.5 sm:py-2 rounded-xl backdrop-blur-xl border ${darkMode ? 'bg-zinc-900/80 border-zinc-800' : 'bg-white/80 border-zinc-200 shadow-xl'}`}>
+      {/* Compact Navigation - CENTERED */}
+      <nav className="fixed bottom-3 sm:bottom-4 left-1/2 transform -translate-x-1/2 z-50 w-full flex justify-center">
+        <div className={`flex items-center justify-center gap-0.5 px-1.5 sm:px-2 py-1.5 sm:py-2 rounded-xl backdrop-blur-xl border ${darkMode ? 'bg-zinc-900/80 border-zinc-800' : 'bg-white/80 border-zinc-200 shadow-xl'}`}>
           <button onClick={() => scrollToSection('home')} className={`p-1.5 sm:p-2 rounded-lg transition-all ${activeSection === 'home' ? (darkMode ? 'bg-zinc-800' : 'bg-zinc-200') : ''}`}><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></button>
           <button onClick={() => scrollToSection('experience')} className={`p-1.5 sm:p-2 rounded-lg transition-all ${activeSection === 'experience' ? (darkMode ? 'bg-zinc-800' : 'bg-zinc-200') : ''}`}><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></button>
           <button onClick={() => scrollToSection('projects')} className={`p-1.5 sm:p-2 rounded-lg transition-all ${activeSection === 'projects' ? (darkMode ? 'bg-zinc-800' : 'bg-zinc-200') : ''}`}><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg></button>
@@ -265,7 +265,7 @@ export default function Portfolio() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-3 leading-tight">Hi, I'm Meenakshi 👋</h1>
             <p className={`text-sm sm:text-base md:text-lg lg:text-xl mb-4 sm:mb-5 leading-snug ${darkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>AI Enthusiast blending logic, empathy, and code to make machines a little more human.</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start">
-              <a href="https://drive.google.com/file/d/1zMsqmJKWkRBS8dQZmFEz3pOVWc3cMdKH/view" target="_blank" rel="noopener noreferrer" className={`px-5 py-2.5 rounded-lg font-medium transition-all hover:scale-105 text-sm ${darkMode ? 'bg-white text-black hover:bg-zinc-200' : 'bg-zinc-900 text-white hover:bg-zinc-800'}`}>View Resume</a>
+              <a href="https://drive.google.com/file/d/1zOBhSawkGFnXO4YsC8PMwH94LoChsshM/view?usp=sharing" target="_blank" rel="noopener noreferrer" className={`px-5 py-2.5 rounded-lg font-medium transition-all hover:scale-105 text-sm ${darkMode ? 'bg-white text-black hover:bg-zinc-200' : 'bg-zinc-900 text-white hover:bg-zinc-800'}`}>View Resume</a>
               <button onClick={copyEmail} className={`px-5 py-2.5 rounded-lg font-medium transition-all border-2 hover:scale-105 flex items-center justify-center gap-1.5 text-sm ${darkMode ? 'border-zinc-700 hover:border-zinc-500' : 'border-zinc-300 hover:border-zinc-400'}`}>
                 {copied ? <><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/></svg>Copied!</> : <><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>Copy Email</>}
               </button>
@@ -285,7 +285,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Compact About Section - UPDATED */}
+      {/* Compact About Section */}
       <section className={`px-4 py-6 sm:py-8 border-t relative z-10 ${darkMode ? 'border-zinc-900' : 'border-zinc-200'}`}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-xl sm:text-2xl font-bold mb-3">Meenakshi</h2>
@@ -308,7 +308,7 @@ export default function Portfolio() {
               <h3 className="font-semibold text-base mb-2 flex items-center gap-1.5">Featured Writing ✍️</h3>
               <div className="space-y-3">
                 {writing.map((article, idx) => (
-                  <div key={idx} className={`p-3 rounded-lg border ${darkMode ? 'bg-zinc-900/50 border-zinc-800' : 'bg-white border-zinc-200'}`}>
+                  <a key={idx} href={article.link} target="_blank" rel="noopener noreferrer" className={`block p-3 rounded-lg border transition-all hover:scale-[1.02] ${darkMode ? 'bg-zinc-900/50 border-zinc-800 hover:border-zinc-700' : 'bg-white border-zinc-200 hover:border-zinc-300'}`}>
                     <div className="flex items-start gap-2">
                       <span className="text-lg">{article.icon}</span>
                       <div className="flex-1">
@@ -317,7 +317,7 @@ export default function Portfolio() {
                         <p className={`text-xs leading-relaxed ${darkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>{article.description}</p>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
