@@ -125,7 +125,7 @@ export default function Portfolio() {
       description: "XGBoost-based time series forecasting for smart grid optimization. Analyzed 4.5M+ records to predict electricity demand—reducing MAPE by 45% vs baseline ARIMA.",
       tags: ["XGBoost", "Time Series", "Python", "Smart Grid"],
       image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800",
-      github: "https://github.com/Msundara19/Smart-Grid-Load-Forecasting",
+      github: "https://github.com/Msundara19/Power_Load_predictor",
       icon: "⚡",
       caseStudy: {
         challenge: "Power grids face inefficiency due to poor demand forecasting. Traditional statistical models (ARIMA) fail to capture complex patterns in consumption data, leading to wastage or shortfalls.",
