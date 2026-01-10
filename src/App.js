@@ -167,7 +167,7 @@ export default function Portfolio() {
 
   const education = [
     {
-      degree: "Master of Science in Artificial Intelligence",
+      degree: "Master of Engineering in Artificial Intelligence",
       school: "Illinois Institute of Technology",
       period: "Sep 2024 - Dec 2025",
       courses: ["Hardware Acceleration for ML", "Secure ML", "Computer Vision", "Deep Learning", "Machine Learning", "Intro to Cybersecurity", "Cloud Computing and Cloud native systems", "AI in Smart Grids", "Object Oriented Programming for Machine Learning"],
