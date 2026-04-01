@@ -714,7 +714,7 @@ export default function Portfolio() {
                         <h3 className="font-bold text-base">{exp.title}</h3>
                         <p className={`text-sm font-medium ${darkMode ? 'text-cyan-400/80' : 'text-cyan-600'}`}>{exp.company}</p>
                       </div>
-                      <div className="text-right">
+                      <div className="sm:text-right">
                         <span className={`font-mono text-xs block ${darkMode ? 'text-zinc-200' : 'text-zinc-600'}`}>{exp.period}</span>
                         {exp.location && <span className={`text-xs ${darkMode ? 'text-zinc-200' : 'text-zinc-600'}`}>{exp.location}</span>}
                       </div>
