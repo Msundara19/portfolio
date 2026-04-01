@@ -577,14 +577,14 @@ export default function Portfolio() {
       </aside>
 
       {/* ── Mobile bottom bar ── */}
-      <nav className="lg:hidden fixed bottom-3 left-1/2 -translate-x-1/2 z-50">
-        <div className={`flex items-center gap-0.5 px-2 py-1.5 rounded-xl backdrop-blur-xl border ${darkMode ? 'bg-zinc-900/80 border-zinc-800' : 'bg-white/80 border-zinc-200 shadow-xl'}`}>
+      <nav className="lg:hidden fixed bottom-3 left-3 right-3 z-50">
+        <div className={`flex items-center gap-0.5 px-2 py-1.5 rounded-xl backdrop-blur-xl border overflow-x-auto scrollbar-hide ${darkMode ? 'bg-zinc-900/80 border-zinc-800' : 'bg-white/80 border-zinc-200 shadow-xl'}`}>
           {navItems.map(item => (
-            <button key={item.id} onClick={() => scrollToSection(item.id)} className={`px-3 py-1.5 rounded-lg transition-all text-xs font-medium ${activeSection === item.id ? (darkMode ? 'bg-cyan-500/20 text-cyan-400' : 'bg-cyan-50 text-cyan-700') : (darkMode ? 'text-zinc-200' : 'text-zinc-600')}`}>
+            <button key={item.id} onClick={() => scrollToSection(item.id)} className={`flex-shrink-0 px-2.5 py-1.5 rounded-lg transition-all text-xs font-medium ${activeSection === item.id ? (darkMode ? 'bg-cyan-500/20 text-cyan-400' : 'bg-cyan-50 text-cyan-700') : (darkMode ? 'text-zinc-200' : 'text-zinc-600')}`}>
               {item.label}
             </button>
           ))}
-          <button onClick={() => setDarkMode(!darkMode)} className={`p-1.5 rounded-lg ml-1 ${darkMode ? 'text-zinc-200' : 'text-zinc-600'}`}>
+          <button onClick={() => setDarkMode(!darkMode)} className={`flex-shrink-0 p-1.5 rounded-lg ml-1 ${darkMode ? 'text-zinc-200' : 'text-zinc-600'}`}>
             {darkMode ? <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg> : <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>}
           </button>
         </div>
@@ -595,7 +595,7 @@ export default function Portfolio() {
 
       {/* Hero Section */}
       <section id="home" className="px-4 pt-16 pb-8 sm:pt-20 sm:pb-10 relative z-10">
-        <div className="max-w-6xl w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+        <div className="max-w-6xl mx-auto w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
           <div className="flex-1 text-center lg:text-left">
 
             {/* Status badge */}
@@ -1117,9 +1117,9 @@ export default function Portfolio() {
       </div>{/* end lg:pl-52 wrapper */}
 
       {/* Chat Widget */}
-      <div className="fixed bottom-6 right-6 z-[200] flex flex-col items-end gap-3">
+      <div className="fixed bottom-20 lg:bottom-6 right-3 sm:right-6 z-[200] flex flex-col items-end gap-3">
         {chatOpen && (
-          <div className={`w-80 sm:w-96 rounded-2xl border shadow-2xl flex flex-col overflow-hidden ${darkMode ? 'bg-zinc-900 border-zinc-800' : 'bg-white border-zinc-200'}`} style={{ height: '420px' }}>
+          <div className={`w-[calc(100vw-1.5rem)] sm:w-80 md:w-96 rounded-2xl border shadow-2xl flex flex-col overflow-hidden ${darkMode ? 'bg-zinc-900 border-zinc-800' : 'bg-white border-zinc-200'}`} style={{ height: '420px' }}>
             {/* Header */}
             <div className={`flex items-center justify-between px-4 py-3 border-b ${darkMode ? 'border-zinc-800 bg-zinc-900' : 'border-zinc-100 bg-white'}`}>
               <div className="flex items-center gap-2.5">
