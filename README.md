@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Meenakshi Sridharan — Portfolio v2.0
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal portfolio site for Meenakshi Sridharan, AI/ML Systems Engineer. Built with React and Tailwind CSS.
 
-## Available Scripts
+**Live site** &nbsp;|&nbsp; **Role target:** AI/ML Engineer · ML Infrastructure Engineer · Software Engineer
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## About
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+v2 of my personal portfolio — designed to showcase production ML systems, research, and engineering work across inference optimization, computer vision, LLMs, and hardware acceleration. Features a sidebar navigation, filterable project grid, per-project case study modals, and an in-page assistant that answers questions about my background without any external API.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Framework:** React 18 (Create React App)
+- **Styling:** Tailwind CSS + custom CSS animations
+- **Fonts:** Montserrat, JetBrains Mono (Google Fonts)
+- **Deployment:** Railway
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Dark / light mode toggle
+- Fixed sidebar navigation with active section tracking via IntersectionObserver
+- Project filter tabs — ML Systems, Computer Vision, Hardware, LLM
+- Featured project hero card
+- Per-project case study modals
+- Scroll reveal animations with staggered delays
+- Portfolio assistant chatbot — fully client-side, keyword-based, no API key required
+- Responsive layout — sidebar on desktop, bottom nav on mobile
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Sections
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| # | Section | Contents |
+|---|---------|----------|
+| 00 | Home | Hero, tagline, quick links |
+| 01 | Experience | ML internships — Wallet Wealth LLP, NIOT |
+| 02 | Projects | 9 projects across ML Systems, CV, Hardware, LLM |
+| 03 | Publications | IEEE research paper, Medium articles |
+| 04 | Skills | ML/AI, CV, LLMs, Hardware, Backend, Cloud |
+| 05 | Awards | Best Outgoing Student, Best Project Award |
+| 06 | Certifications | Google AI Essentials, deeplearning.ai, Coursera |
+| 07 | Leadership | TechNews (IIT Chicago), CPS, Milaap |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Running Locally
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm install
+npm start
+```
 
-## Learn More
+Opens at [http://localhost:3000](http://localhost:3000).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Production Build
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run build
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contact
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Email:** msridharansundaram@hawk.illinoistech.edu  
+**LinkedIn:** [linkedin.com/in/meenakshi-sridharan-89133b261](https://www.linkedin.com/in/meenakshi-sridharan-89133b261/)  
+**GitHub:** [github.com/Msundara19](https://github.com/Msundara19)
