@@ -616,7 +616,7 @@ export default function Portfolio() {
 
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start mb-6">
-              <a href="/Meenakshi_Resume.pdf" target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-lg font-semibold transition-all hover:scale-105 text-sm bg-cyan-500 text-black hover:bg-cyan-400 tracking-wide">
+              <a href="/Meenakshi_Sridharan_Sundaram_Resume.pdf" target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-lg font-semibold transition-all hover:scale-105 text-sm bg-cyan-500 text-black hover:bg-cyan-400 tracking-wide">
                 View Resume
               </a>
               <button onClick={copyEmail} className={`px-5 py-2.5 rounded-lg font-medium transition-all border hover:scale-105 flex items-center justify-center gap-1.5 text-sm ${darkMode ? 'border-zinc-700 hover:border-cyan-500/50 text-zinc-300' : 'border-zinc-300 hover:border-cyan-500 text-zinc-700'}`}>
