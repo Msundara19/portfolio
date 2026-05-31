@@ -39,13 +39,17 @@ export default function Portfolio() {
     if (/ready|available|hiring|looking for work|open to work|actively look|job seek|currently looking/.test(q))
       return "Yes! Meenakshi is actively open to AI/ML engineering and systems roles. You can reach her at msridharansundaram@hawk.illinoistech.edu — there's also a 'Get In Touch' button at the bottom of this page.";
     if (/experience|job|intern|career|position|role/.test(q))
-      return "She has two ML internships:\n\n1. Machine Learning Intern at Wallet Wealth LLP (Jun 2023 – Jul 2024, Full-time) — built the core LLM-powered financial advisory platform with multi-provider routing (Groq + OpenAI), RAG retrieval, and Redis caching, reducing API costs ~40%.\n\n2. ML Research Intern at National Institute of Ocean Technology (Jan 2023 – Apr 2024, Part-time) — built a real-time underwater object detection system for AUV imagery, published in IEEE.";
+      return "Her technical experience spans three roles:\n\n1. Full-Stack AI Engineer at Dakdan Sportsmedia (Mar 2026 – Present) — building a 5-agent AI workforce platform, GPT-4o lead scoring engine (0–100 score), Google Maps scraper (100 leads/run), Supabase Edge Functions API, React/TypeScript admin dashboard with Recharts, and Gemini Live voice AI.\n\n2. Machine Learning Intern at Wallet Wealth LLP (Jun 2023 – Jul 2024, Full-time) — built the core LLM-powered financial advisory platform with multi-provider routing (Groq + OpenAI), RAG retrieval, and Redis caching, reducing API costs ~40%.\n\n3. ML Research Intern at National Institute of Ocean Technology (Jan 2023 – Apr 2024, Part-time) — built a real-time underwater object detection system for AUV imagery, published in IEEE.";
     if (/wallet wealth|financial|llm advisor/.test(q))
       return "At Wallet Wealth LLP (Jun 2023 – Jul 2024, Full-time), Meenakshi developed the core AI financial advisory platform. She implemented multi-provider LLM routing between Groq and OpenAI, built RAG-based retrieval for personalized recommendations, added Redis caching to cut API costs ~40%, and achieved sub-3s query response times on a live client-facing platform.";
     if (/niot|ocean technology|underwater|auv/.test(q))
       return "At the National Institute of Ocean Technology (Jan 2023 – Apr 2024, Part-time), she built a real-time underwater object detection system for Autonomous Underwater Vehicle (AUV) imagery. This research was published in IEEE.";
+    if (/dakdan|sportsmedia|lead.generat|ai.*workforce|digital employee/.test(q))
+      return "At Dakdan Sportsmedia, Meenakshi is a Full-Stack AI Engineer building an AI lead generation platform. She designed a 5-agent AI workforce (GPT-4o) targeting 90% reduction in manual sales prospecting across Zoo, Sports, Trucking, and SMB verticals, built a GPT-4o lead scoring engine (0–100 score, auto-routing leads ≥60 into GoHighLevel CRM), engineered a Google Maps scraper ingesting 100 geo-qualified leads per run with dual-mode geographic filtering (Distance Matrix + Haversine, 50-mile radius), shipped a production API on Supabase Edge Functions (Hono + Deno, TypeScript) with JWT auth and Row-Level Security, built a React/TypeScript admin dashboard with Kanban pipeline and real-time Recharts metrics, and integrated Gemini Live API for real-time voice AI with sub-second latency.";
+    if (/smartdoc|pdf.*q.?a|rag.*pdf|document.*q.?a|intelligent.*pdf/.test(q))
+      return "SmartDoc is Meenakshi's production RAG system for PDF Q&A. Key features: (1) structure-aware chunking — classifies document type (technical/research/legal/general) and splits on structural boundaries, not fixed windows; (2) hybrid BM25+vector retrieval fused via Reciprocal Rank Fusion; (3) cosine similarity gate blocking LLM calls below 0.30 — eliminating hallucination by design; (4) confidence-labeled answers (Insufficient/Low/Medium/High) with source evidence chunks; (5) 3-turn conversational memory; (6) DB-cached flashcards (0 repeat token cost after first generation); (7) interactive citation highlighting. Built on ASP.NET Core 10, PostgreSQL+pgvector, React, Jina AI embeddings, and Groq LLaMA-3.3-70B. Live at smart-doc-chi.vercel.app.";
     if (/project|built|build|ship|work on/.test(q))
-      return "Her key projects:\n\n• FastInfer — 2.3× ML inference speedup on Apple Silicon using ONNX + CoreML FP16 + Redis caching (Featured)\n• TrustCart — real-time e-commerce fraud detection with Groq LLM, 95%+ precision, sub-5s response\n• MediTrack v2.0 — clinical-grade wound healing monitor with computer vision\n• FPGA VGG — 49.8× faster CNN inference on FPGA with INT16 quantization\n• SSD Object Detection — custom SSD pipeline for real-world object detection\n• Smart Grid Forecasting — 45% error reduction in power prediction\n• Gesture IoT — 95%+ accuracy gesture recognition at 33ms latency\n\nClick any project card on the site to see the full case study.";
+      return "Her key projects:\n\n• FastInfer — 2.3× ML inference speedup on Apple Silicon using ONNX + CoreML FP16 + Redis caching (Featured)\n• SmartDoc — production RAG for PDF Q&A with confidence scoring, structure-aware chunking, and hallucination prevention gate\n• TrustCart — real-time e-commerce fraud detection with Groq LLM, 95%+ precision, sub-5s response\n• MediTrack v2.0 — clinical-grade wound healing monitor with computer vision\n• FPGA VGG — 49.8× faster CNN inference on FPGA with INT16 quantization\n• SSD Object Detection — custom SSD pipeline for real-world object detection\n• Smart Grid Forecasting — 45% error reduction in power prediction\n• Gesture IoT — 95%+ accuracy gesture recognition at 33ms latency\n\nClick any project card on the site to see the full case study.";
     if (/fastinfer|inference|apple silicon|onnx|coreml/.test(q))
       return "FastInfer is her featured project — a production ML inference optimizer for ResNet-50 on Apple Silicon. It stacks ONNX runtime, CoreML FP16 quantization, static batching, Redis caching, and multi-worker FastAPI serving to achieve 2.3× throughput improvement. Each optimization was benchmarked independently. Deployed live on Railway.";
     if (/trustcart|fraud|e.?commerce/.test(q))
@@ -89,7 +93,7 @@ export default function Portfolio() {
     if (/start|notice period|join|when can|available from|immediate/.test(q))
       return "She can start immediately — no notice period required.";
     if (/background|overview|summary|who is she|tell me more/.test(q))
-      return "Meenakshi is an AI/ML Systems Engineer who builds things that actually ship. She completed her Master's in AI for Computer Vision at Illinois Tech (2025) after her BE in ECE from Hindustan Institute, Chennai.\n\nProfessionally, she's built an LLM-powered financial advisory platform at Wallet Wealth and published IEEE research on underwater object detection at NIOT.\n\nHer projects span the full ML stack — a 2.3× inference speedup on Apple Silicon (FastInfer), a fraud detection API with 95%+ precision (TrustCart), clinical-grade wound analysis (MediTrack), and 49.8× CNN acceleration on FPGA. She's comfortable from hardware to production API.";
+      return "Meenakshi is an AI/ML Systems Engineer who builds things that actually ship. She completed her Master's in AI for Computer Vision at Illinois Tech (2025) after her BE in ECE from Hindustan Institute, Chennai.\n\nProfessionally, she's currently building a 5-agent AI lead generation platform at Dakdan Sportsmedia, previously developed an LLM-powered financial advisory platform at Wallet Wealth, and published IEEE research on underwater object detection at NIOT.\n\nHer projects span the full ML stack — a 2.3× inference speedup on Apple Silicon (FastInfer), a production RAG system for PDF Q&A (SmartDoc), a fraud detection API with 95%+ precision (TrustCart), clinical-grade wound analysis (MediTrack), and 49.8× CNN acceleration on FPGA. She's comfortable from hardware to production API.";
     if (/resume|cv|download|view resume/.test(q))
       return "You can view or download her resume directly from this portfolio site — look for the 'Resume' or 'Download Resume' button. You can also reach her at msridharansundaram@hawk.illinoistech.edu for a copy.";
     if (/hobb|interest|outside work|free time|personal|fun|passion|sing|music/.test(q))
@@ -216,6 +220,22 @@ export default function Portfolio() {
       }
     },
     {
+      category: "LLM",
+      name: "SmartDoc — Intelligent PDF Q&A",
+      shortDesc: "Production RAG with confidence scoring and zero hallucination",
+      description: "Production-grade RAG system for PDF Q&A with structure-aware chunking, hybrid BM25+vector retrieval via Reciprocal Rank Fusion, explainable confidence scoring, and a similarity gate that blocks LLM calls on out-of-scope queries — eliminating hallucination by design.",
+      tags: ["ASP.NET Core", "RAG", "pgvector", "React"],
+      image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800",
+      live: "https://smart-doc-chi.vercel.app",
+      icon: "📄",
+      caseStudy: {
+        challenge: "Tools like ChatPDF share three core problems: blind fixed-window chunking breaks ideas mid-thought, LLMs are called regardless of retrieval quality causing hallucinations, and answers return with zero transparency on confidence or source grounding.",
+        approach: "Built a 4-strategy structure-aware chunking pipeline (technical/research/legal/general), hybrid BM25+vector retrieval fused via RRF, and a cosine similarity gate (threshold 0.30) that blocks LLM calls entirely on low-relevance queries. Added conversational memory (3-turn history), DB-cached flashcard generation, document-specific query suggestions, and interactive source citation highlighting.",
+        results: ["Zero hallucination below 0.30 cosine similarity — LLM never called", "22 clean chunks from 129 raw (vs 102 junk with naive chunking)", "Confidence-labeled answers: Insufficient / Low / Medium / High", "0 repeat token cost for flashcards after first generation (DB-cached)"],
+        techStack: ["ASP.NET Core 10", "C#", "React 18", "TypeScript", "PostgreSQL + pgvector", "Jina AI Embeddings", "Groq LLaMA-3.3-70B", "BM25 + RRF", "Docker", "Railway", "Vercel", "Render"]
+      }
+    },
+    {
       category: "Computer Vision",
       name: "Gesture-Controlled IoT for Accessibility",
       shortDesc: "95%+ accuracy gesture recognition with 33ms latency",
@@ -300,6 +320,23 @@ export default function Portfolio() {
   ];
 
   const workExperience = [
+    {
+      title: "Full-Stack AI Engineer",
+      company: "Dakdan Sportsmedia",
+      period: "Mar 2026 - Present",
+      location: "Remote · Full-time",
+      description: "Designed and shipped a 5-agent AI workforce (\"Digital Employee\") platform targeting 90% reduction in manual sales prospecting time across Zoo, Sports, Trucking, and SMB verticals — replacing a fully manual outbound process with autonomous pipeline orchestration.",
+      achievements: ["90% reduction in manual prospecting", "50 AI-personalized emails/day", "100 geo-qualified leads/run", "Sub-second voice AI latency"],
+      bullets: [
+        "Designed 5-agent AI workforce (GPT-4o) for autonomous lead generation across multiple verticals, replacing a fully manual outbound process",
+        "Built GPT-4o lead scoring engine (0–100 fit/intent score) auto-routing high-value leads (≥60) into GoHighLevel CRM — eliminating manual triage entirely",
+        "Engineered Google Maps scraper ingesting up to 100 geo-qualified leads per run with dual-mode geographic filtering (Distance Matrix API + Haversine, 50-mile radius)",
+        "Shipped production RESTful API on Supabase Edge Functions (Hono + Deno, TypeScript) with JWT auth, AI enrichment triggers, multi-tenant PostgreSQL + Row-Level Security, and 8+ composite/GIN indexes",
+        "Built React/TypeScript admin dashboard with 6-stage Kanban pipeline, AI confidence score visualizations, and real-time campaign metrics (Recharts)",
+        "Integrated Gemini Live API (WebSockets + Web Audio API) for real-time voice AI receptionist with sub-second response latency"
+      ],
+      icon: "🏈"
+    },
     {
       title: "Machine Learning Intern",
       company: "Wallet Wealth LLP",
