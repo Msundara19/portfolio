@@ -25,7 +25,7 @@ export default function Portfolio() {
     if (/\b(hi|hello|hey|sup|yo)\b/.test(q))
       return "Hey! Ask me anything about Meenakshi — her projects, skills, experience, or how to reach her.";
     if (/who (is|are)|about (her|meenakshi)|introduce|tell me about/.test(q))
-      return "Meenakshi Sridharan is an AI/ML Systems Engineer. She completed her Master's in AI for Computer Vision at Illinois Institute of Technology (2024–2025) and her BE in ECE from Hindustan Institute of Technology and Science, Chennai (2019–2023). She builds production ML systems — inference optimization, computer vision pipelines, LLM applications, and hardware acceleration on FPGA.";
+      return "Meenakshi Sridharan is an AI/ML Engineer. She completed her Master's in AI for Computer Vision at Illinois Institute of Technology (2024–2025) and her BE in ECE from Hindustan Institute of Technology and Science, Chennai (2019–2023). She builds production ML systems — inference optimization, computer vision pipelines, LLM applications, and hardware acceleration on FPGA.";
     if (/soft skill|non.tech|people skill|communication|leadership skill|interpersonal/.test(q))
       return "Beyond her technical work, Meenakshi has built strong soft skills through non-technical roles:\n\n• Editorial leadership — as Assistant Editor in Chief at IIT Chicago's TechNews, she led a team of writers, managed editorial deadlines, and communicated complex tech topics to a broad audience.\n• Technical writing & communication — as a Senior Writer she translated dense technical subjects into accessible articles, honing clarity and concision.\n• Business development — at Milaap (2023) she worked on outreach and stakeholder engagement, developing negotiation and relationship-building skills.\n• Operations & coordination — at CPS she managed structured testing workflows, building attention to detail and process discipline.\n\nThese roles reflect strong communication, team collaboration, time management, and the ability to work across both technical and non-technical audiences.";
     if (/skill|tech|stack|language|tool|framework|know|proficient|expert/.test(q))
@@ -41,21 +41,21 @@ export default function Portfolio() {
     if (/experience|job|intern|career|position|role/.test(q))
       return "Her technical experience spans three roles:\n\n1. Full-Stack AI Engineer at Dakdan Sportsmedia (Mar 2026 – Present) — building a 5-agent AI workforce platform, GPT-4o lead scoring engine (0–100 score), Google Maps scraper (100 leads/run), Supabase Edge Functions API, React/TypeScript admin dashboard with Recharts, and Gemini Live voice AI.\n\n2. Machine Learning Intern at Wallet Wealth LLP (Jun 2023 – Jul 2024, Full-time) — built the core LLM-powered financial advisory platform with multi-provider routing (Groq + OpenAI), RAG retrieval, and Redis caching, reducing API costs ~40%.\n\n3. ML Research Intern at National Institute of Ocean Technology (Jan 2023 – Apr 2024, Part-time) — built a real-time underwater object detection system for AUV imagery, published in IEEE.";
     if (/wallet wealth|financial|llm advisor/.test(q))
-      return "At Wallet Wealth LLP (Jun 2023 – Jul 2024, Full-time), Meenakshi developed the core AI financial advisory platform. She implemented multi-provider LLM routing between Groq and OpenAI, built RAG-based retrieval for personalized recommendations, added Redis caching to cut API costs ~40%, and achieved sub-3s query response times on a live client-facing platform.";
+      return "At Wallet Wealth LLP (Jun 2023 – Jul 2024, Full-time), Meenakshi built the complete digital platform for a SEBI-registered RIA (INA000020998) serving 500+ families. She engineered 5 lead generation funnels (Investor Quiz with 8-archetype profiling, 8 financial calculators with booking CTAs, live AMFI fund search across 10,000+ schemes, Groq LLaMA 3.3 70B AI chat widget on every page, content marketing email capture), shipped 9 REST API routes, implemented Redis caching (–40% API costs), LangChain multi-provider LLM routing with <3s response, and a full SEBI/AMFI compliance layer (CSRF protection, Zod validation, Upstash Redis rate limiting, investor charter, 3-tier grievance escalation to SEBI SCORES and SmartODR).";
     if (/niot|ocean technology|underwater|auv/.test(q))
       return "At the National Institute of Ocean Technology (Jan 2023 – Apr 2024, Part-time), she built a real-time underwater object detection system for Autonomous Underwater Vehicle (AUV) imagery. This research was published in IEEE.";
     if (/dakdan|sportsmedia|lead.generat|ai.*workforce|digital employee/.test(q))
-      return "At Dakdan Sportsmedia, Meenakshi is a Full-Stack AI Engineer building an AI lead generation platform. She designed a 5-agent AI workforce (GPT-4o) targeting 90% reduction in manual sales prospecting across Zoo, Sports, Trucking, and SMB verticals, built a GPT-4o lead scoring engine (0–100 score, auto-routing leads ≥60 into GoHighLevel CRM), engineered a Google Maps scraper ingesting 100 geo-qualified leads per run with dual-mode geographic filtering (Distance Matrix + Haversine, 50-mile radius), shipped a production API on Supabase Edge Functions (Hono + Deno, TypeScript) with JWT auth and Row-Level Security, built a React/TypeScript admin dashboard with Kanban pipeline and real-time Recharts metrics, and integrated Gemini Live API for real-time voice AI with sub-second latency.";
+      return "At Dakdan Sportsmedia, Meenakshi is a Full-Stack AI Engineer building an AI lead generation platform. She designed a 5-agent AI workforce (GPT-4o) with a design target of 90% reduction in manual sales prospecting across Zoo, Sports, Trucking, and SMB verticals, built a GPT-4o lead scoring engine (0–100 score, auto-routing leads ≥60 into GoHighLevel CRM), engineered a Google Maps scraper ingesting 100 geo-qualified leads per run with dual-mode geographic filtering (Distance Matrix + Haversine, 50-mile radius), shipped a production API on Supabase Edge Functions (Hono + Deno, TypeScript) with JWT auth and Row-Level Security, built a React/TypeScript admin dashboard with Kanban pipeline and real-time Recharts metrics, and integrated Gemini Live API for real-time voice AI with sub-second latency.";
     if (/smartdoc|pdf.*q.?a|rag.*pdf|document.*q.?a|intelligent.*pdf/.test(q))
       return "SmartDoc is Meenakshi's production RAG system for PDF Q&A. Key features: (1) structure-aware chunking — classifies document type (technical/research/legal/general) and splits on structural boundaries, not fixed windows; (2) hybrid BM25+vector retrieval fused via Reciprocal Rank Fusion; (3) cosine similarity gate blocking LLM calls below 0.30 — eliminating hallucination by design; (4) confidence-labeled answers (Insufficient/Low/Medium/High) with source evidence chunks; (5) 3-turn conversational memory; (6) DB-cached flashcards (0 repeat token cost after first generation); (7) interactive citation highlighting. Built on ASP.NET Core 10, PostgreSQL+pgvector, React, Jina AI embeddings, and Groq LLaMA-3.3-70B. Live at smart-doc-chi.vercel.app.";
     if (/project|built|build|ship|work on/.test(q))
-      return "Her key projects:\n\n• FastInfer — 2.3× ML inference speedup on Apple Silicon using ONNX + CoreML FP16 + Redis caching (Featured)\n• SmartDoc — production RAG for PDF Q&A with confidence scoring, structure-aware chunking, and hallucination prevention gate\n• TrustCart — real-time e-commerce fraud detection with Groq LLM, 95%+ precision, sub-5s response\n• MediTrack v2.0 — clinical-grade wound healing monitor with computer vision\n• FPGA VGG — 49.8× faster CNN inference on FPGA with INT16 quantization\n• SSD Object Detection — custom SSD pipeline for real-world object detection\n• Smart Grid Forecasting — 45% error reduction in power prediction\n• Gesture IoT — 95%+ accuracy gesture recognition at 33ms latency\n\nClick any project card on the site to see the full case study.";
+      return "Her key projects:\n\n• FastInfer — 2.3× ML inference speedup on Apple Silicon using ONNX + CoreML FP16 + Redis caching (Featured)\n• SmartDoc — production RAG for PDF Q&A with confidence scoring, structure-aware chunking, and hallucination prevention gate\n• TrustCart — real-time e-commerce fraud detection with Groq LLM, 95%+ precision, sub-5s response\n• MediTrack v2.0 — wound healing monitor using clinical assessment criteria, multi-patient tracking\n• FPGA VGG — 49.8× faster CNN inference on FPGA with INT16 quantization\n• SSD Object Detection — custom SSD pipeline for real-world object detection\n• Smart Grid Forecasting — 45% error reduction in power prediction\n• Gesture IoT — 95%+ accuracy gesture recognition at 33ms latency\n\nClick any project card on the site to see the full case study.";
     if (/fastinfer|inference|apple silicon|onnx|coreml/.test(q))
       return "FastInfer is her featured project — a production ML inference optimizer for ResNet-50 on Apple Silicon. It stacks ONNX runtime, CoreML FP16 quantization, static batching, Redis caching, and multi-worker FastAPI serving to achieve 2.3× throughput improvement. Each optimization was benchmarked independently. Deployed live on Railway.";
     if (/trustcart|fraud|e.?commerce/.test(q))
       return "TrustCart is an AI fraud detection system for e-commerce. It uses FastAPI + Groq LLM (Llama 3.1) to analyze product listings from Google Shopping and eBay using statistical anomaly detection. It achieves 95%+ precision with sub-5 second response times. Deployed on Railway.";
     if (/meditrack|wound|medical|clinical/.test(q))
-      return "MediTrack v2.0 is a clinical-grade wound healing monitor. It uses computer vision (OpenCV + ML) to analyze wound progression across multiple patients, providing structured healing reports. Built with Next.js on the frontend.";
+      return "MediTrack v2.0 is a wound healing monitor built on clinical assessment criteria (size, color, tissue, exudate, edge definition, surrounding skin). It uses computer vision (OpenCV + ML) to analyze wound progression across multiple patients, providing structured healing reports. Built with Next.js on the frontend.";
     if (/fpga|vgg|hardware|vitis|hls|quantization/.test(q))
       return "She implemented VGG neural network inference on FPGA using Vitis HLS, achieving 49.8× faster CNN inference compared to CPU baseline through INT16 quantization and hardware pipelining. This is one of her core hardware acceleration projects.";
     if (/ssd|object detection/.test(q))
@@ -87,13 +87,13 @@ export default function Portfolio() {
     if (/remote|relocat|onsite|hybrid|in.person|work from/.test(q))
       return "Yes to both — Meenakshi is fully open to remote work and willing to relocate. She's currently based in Chicago, IL.";
     if (/how (many|long|much) (year|experience|time)|years of exp|total exp|work exp|how experienced/.test(q))
-      return "Meenakshi has approximately 2.5 years of total professional experience:\n\n• ~1.4 years of hands-on technical ML/AI experience — as an ML Intern at Wallet Wealth (full-time, 13 months) and ML Research Intern at NIOT (part-time, overlapping period).\n• ~1 year of non-technical experience across editorial leadership (TechNews), operations (CPS), and business development (Milaap).\n\nWhile her formal internship tenure is ~1.4 years in tech, the breadth of projects she's independently shipped — spanning inference optimization, computer vision, LLMs, and FPGA — reflects a depth that goes well beyond that number.";
+      return "Meenakshi has ~1.4 years of direct ML/AI engineering experience: Full-Stack AI Engineer at Dakdan Sportsmedia (Mar 2026–present), ML Intern at Wallet Wealth LLP (Jun 2023–Jul 2024, full-time, 13 months), and ML Research Intern at NIOT (Jan 2023–Apr 2024, part-time). She also has ~1 year of non-technical professional experience (editorial leadership, operations, business development). While ~1.4 years is the formal ML/AI tenure, the breadth of independently shipped systems — inference optimization, computer vision, LLMs, FPGA, full-stack — reflects depth well beyond that number.";
     if (/language|speak|spoken|tongue|fluent/.test(q))
       return "Meenakshi is fluent in three languages: English, Hindi, and Tamil.";
     if (/start|notice period|join|when can|available from|immediate/.test(q))
       return "She can start immediately — no notice period required.";
     if (/background|overview|summary|who is she|tell me more/.test(q))
-      return "Meenakshi is an AI/ML Systems Engineer who builds things that actually ship. She completed her Master's in AI for Computer Vision at Illinois Tech (2025) after her BE in ECE from Hindustan Institute, Chennai.\n\nProfessionally, she's currently building a 5-agent AI lead generation platform at Dakdan Sportsmedia, previously developed an LLM-powered financial advisory platform at Wallet Wealth, and published IEEE research on underwater object detection at NIOT.\n\nHer projects span the full ML stack — a 2.3× inference speedup on Apple Silicon (FastInfer), a production RAG system for PDF Q&A (SmartDoc), a fraud detection API with 95%+ precision (TrustCart), clinical-grade wound analysis (MediTrack), and 49.8× CNN acceleration on FPGA. She's comfortable from hardware to production API.";
+      return "Meenakshi is an AI/ML Engineer who builds things that actually ship. She completed her Master's in AI for Computer Vision at Illinois Tech (2025) after her BE in ECE from Hindustan Institute, Chennai.\n\nProfessionally, she's currently building a 5-agent AI lead generation platform at Dakdan Sportsmedia, previously built the complete digital platform for a SEBI-registered financial advisory firm (Wallet Wealth), and published IEEE research on underwater object detection at NIOT.\n\nHer projects span the full ML stack — a 2.3× inference speedup on Apple Silicon (FastInfer), a production RAG system for PDF Q&A (SmartDoc), a fraud detection API with 95%+ precision (TrustCart), wound analysis using clinical assessment criteria (MediTrack), and 49.8× CNN acceleration on FPGA. She's comfortable from hardware to production API.";
     if (/resume|cv|download|view resume/.test(q))
       return "You can view or download her resume directly from this portfolio site — look for the 'Resume' or 'Download Resume' button. You can also reach her at msridharansundaram@hawk.illinoistech.edu for a copy.";
     if (/hobb|interest|outside work|free time|personal|fun|passion|sing|music/.test(q))
@@ -163,7 +163,7 @@ export default function Portfolio() {
       live: "https://web-production-e61ac.up.railway.app/",
       icon: "🛡️",
       caseStudy: {
-        businessImpact: "E-commerce fraud costs merchants an estimated $41B annually. TrustCart's sub-5s detection pipeline can be integrated into marketplace checkout flows to flag suspicious listings before purchase — achieving 95%+ precision with zero requirement for labeled fraud training data, making it deployable on any product category immediately.",
+        businessImpact: "Industry context: e-commerce fraud costs merchants an estimated $41B annually. TrustCart achieves 95%+ fraud detection precision with sub-5s response — and requires zero labeled training data, making it deployable on any product category immediately without a data collection phase.",
         challenge: "E-commerce platforms struggle with fraud detection at scale. Traditional rule-based systems miss sophisticated scams, while manual review is too slow for millions of listings.",
         approach: "Built a hybrid system combining statistical anomaly detection with Groq LLM analysis. Used percentile-based price classification, outlier removal, and trusted seller recognition. Optimized LLM calls to top 5 risky items for sub-5 second response times.",
         results: ["95%+ fraud detection precision", "Sub-5 second response time", "Multi-platform support (Google Shopping, eBay)", "Deployed on Railway with CI/CD"],
@@ -179,15 +179,15 @@ export default function Portfolio() {
     {
       category: "Computer Vision",
       name: "MediTrack v2.0 - AI Wound Healing Monitor",
-      shortDesc: "Clinical-grade wound analysis with multi-patient tracking",
-      description: "Full-stack healthcare application classifying 7 wound types with 6-factor computer vision pipeline. Real-time wound healing monitor using OpenCV and multi-provider LLMs with sub-5s latency.",
+      shortDesc: "Wound analysis using clinical assessment criteria, multi-patient tracking",
+      description: "Full-stack healthcare application classifying 7 wound types with 6-factor computer vision pipeline built on clinical assessment criteria. Real-time wound healing monitor using OpenCV and multi-provider LLMs with sub-5s latency.",
       tags: ["OpenCV", "LLM", "Next.js", "Computer Vision"],
       image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800",
       github: "https://github.com/Msundara19/meditrack-v2",
       live: "https://meditrack-v2.vercel.app/",
       icon: "🏥",
       caseStudy: {
-        businessImpact: "Post-surgical wound care assessments average $150–$300 per clinical visit. MediTrack enables daily at-home monitoring with clinical-grade CV analysis, reducing the required in-person visit frequency while providing earlier complication detection through trend analysis across healing sessions — directly lowering the cost of post-operative care.",
+        businessImpact: "Industry context: Post-surgical wound care assessments average $150–$300 per clinical visit. MediTrack enables daily at-home monitoring with CV analysis modeled on clinical assessment criteria, reducing the required in-person visit frequency while providing earlier complication detection through trend analysis across healing sessions — directly lowering post-operative care costs.",
         challenge: "Post-surgical wound monitoring requires frequent clinical visits, increasing healthcare costs. Patients lack tools to track healing progress at home with clinical-grade accuracy, leading to delayed complication detection.",
         approach: "Built full-stack production application with 6-factor computer vision pipeline using HSV/LAB segmentation for wound boundary detection, color analysis, and tissue classification. Integrated multi-provider LLMs (Groq, Gemini) for natural language wound reports. Implemented multi-patient tracking with automatic healing score calculation and historical trend analysis.",
         results: ["7 wound type classification", "Sub-5 second end-to-end latency", "6-factor analysis (size, color, tissue, exudate, edges, surrounding)", "Multi-patient tracking with healing scores"],
@@ -225,26 +225,27 @@ export default function Portfolio() {
     },
     {
       category: "LLM",
-      name: "Wallet Wealth - LLM Financial Advisor",
-      shortDesc: "Agentic AI platform with sub-3s response times",
-      description: "RAG-powered financial advisor with real-time market data and multi-provider LLM routing. Production agentic AI platform delivering personalized investment recommendations with conversational memory.",
-      tags: ["React", "FastAPI", "LangChain", "RAG"],
+      name: "Wallet Wealth - Financial Advisory Platform",
+      shortDesc: "15 pages · 9 APIs · 5 funnels · SEBI-compliant · 10,000+ AMFI schemes",
+      description: "Full-stack financial advisory platform for a SEBI-registered RIA (INA000020998) serving 500+ families — 15+ pages, 9 API routes, 8 financial calculators, 5 lead conversion funnels, live AMFI fund search (10,000+ schemes), Groq LLaMA 3.3 70B AI chat, and a SEBI/AMFI-compliant backend.",
+      tags: ["Next.js", "Supabase", "LangChain", "AMFI API"],
       image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800",
       github: "https://github.com/Msundara19/LLM-wealth-advisor",
       live: "https://llm-wealth-advisor.vercel.app/",
       icon: "💰",
       caseStudy: {
-        businessImpact: "~40% reduction in LLM API costs through Redis caching directly compresses operating cost per active user — critical unit economics for a live subscription platform. Sub-3s response time exceeds the 3–5s patience threshold where financial tool users drop off. Multi-provider routing (Groq/OpenAI) ensures zero downtime from single-vendor outages, delivering the reliability a client-facing financial product requires.",
-        challenge: "Retail investors lack access to personalized financial advice. Traditional wealth management is expensive and inaccessible for small portfolios. Generic robo-advisors fail to understand individual risk profiles and market context.",
-        approach: "Developed production agentic AI platform using LangChain with multi-provider LLM routing for optimal performance. Implemented RAG-based retrieval from financial knowledge base. Built responsive React frontend with real-time streaming responses. Added JWT authentication, conversational memory, and portfolio tracking. Deployed on Vercel with FastAPI backend.",
-        results: ["Sub-3 second response times", "~40% API cost reduction via Redis caching", "Multi-provider LLM routing (Groq + OpenAI)", "Full-stack deployment with authentication"],
+        businessImpact: "Built the complete acquisition and retention engine for a SEBI-regulated advisory business (Reg. INA000020998, 500+ families, 40+ AMCs). Every page drives consultation bookings — 5 funnels, 8 calculators, AI chat, and fund search all feed the advisor pipeline. The SEBI/AMFI compliance layer (investor charter, grievance escalation path, fiduciary disclosure) made the platform audit-ready — a hard requirement for a licensed advisory firm. ~40% API cost reduction from Redis caching maintained profitability of the AI chat feature.",
+        challenge: "A SEBI-registered RIA needed a complete digital presence: lead generation, investor education, compliance, fund research, and AI-assisted advisory — all integrated and audit-ready for a regulated financial services context.",
+        approach: "Built full-stack platform with Next.js and Supabase. Engineered 5 lead generation funnels (Investor Quiz with 8 investor archetype profiling, 8 financial calculators, live AMFI fund search across 10,000+ schemes, Groq LLaMA 3.3 70B AI chat widget, content marketing newsletter). Shipped 9 API routes. Implemented LangChain multi-provider LLM routing with Redis caching (–40% API costs). Built full SEBI/AMFI compliance layer: CSRF protection, Zod validation, Upstash Redis rate limiting, investor charter, 3-tier grievance escalation, and RIA vs MFD fiduciary disclosure page.",
+        results: ["5 lead conversion funnels driving consultation bookings", "8 financial calculators (SIP, retirement, tax savings, education, more)", "10,000+ live AMFI mutual fund schemes searchable with NAV data", "SEBI/AMFI-compliant — CSRF, Zod validation, Redis rate limiting, investor charter, 3-tier grievance escalation"],
         usps: [
-          { title: "Multi-Provider LLM Routing with Automatic Fallback", desc: "Seamless Groq/OpenAI switching via LangChain — single-provider outages are invisible to users. Routing also enables cost-vs-quality trade-off selection per query type." },
-          { title: "RAG-Based Financial Knowledge Retrieval", desc: "Answers grounded in a curated financial knowledge base, not pure LLM generation — reduces hallucination risk on regulated financial advice where incorrect answers carry liability." },
-          { title: "~40% API Cost Reduction via Caching", desc: "Redis caching of frequent query patterns eliminates redundant LLM calls. On a platform with repeated portfolio review interactions, this directly reduces cost-per-active-user at scale." },
-          { title: "Conversational Memory with Portfolio Context", desc: "Context-aware multi-turn memory referencing prior client interactions and portfolio details — matches the continuity a human financial advisor provides across sessions." }
+          { title: "5 Conversion Funnels — Every Page Drives a Booking", desc: "Investor Quiz (8-archetype profiler → Supabase CRM + advisor email), 8 calculator CTAs, AMFI fund search, global AI chat widget, and content marketing email capture — every interaction on the platform ends with a path to advisor consultation." },
+          { title: "Live AMFI Fund Search — 10,000+ Schemes", desc: "Real-time NAV data from AMFI India API across 10,000+ mutual fund schemes, with per-fund NAV history and PPF vs ELSS comparator — giving users institutional-grade fund research that routes to advisor booking." },
+          { title: "SEBI/AMFI Regulatory Compliance Layer", desc: "3-tier grievance escalation (direct → SEBI SCORES → SmartODR), CSRF protection, Zod validation at all API boundaries, Upstash Redis rate limiting, investor charter, and RIA vs MFD fiduciary disclosure — audit-ready for a SEBI-licensed firm." },
+          { title: "~40% API Cost Reduction via Redis Caching", desc: "Caching of frequent financial queries (SIP projections, common fund searches, repeated advisor questions) eliminates redundant Groq API calls — directly maintaining profitability of AI features at scale." },
+          { title: "8 Financial Calculators as Lead Magnets", desc: "Dream Home, Retirement, Education, Marriage, SIP vs Lumpsum, Tax (Section 80C), Crorepati, Emergency Fund — each with domain-accurate projections (10% education inflation, 15% SIP p.a., ₹1.5L 80C limit) and a 'Get personalized plan' CTA at the end." }
         ],
-        techStack: ["React", "FastAPI", "LangChain", "OpenAI API", "Groq API", "PostgreSQL", "JWT", "Vercel"]
+        techStack: ["Next.js", "Supabase", "LangChain", "Groq LLaMA 3.3 70B", "AMFI India API", "Upstash Redis", "Nodemailer", "Google Analytics 4", "Zod", "Vercel"]
       }
     },
     {
@@ -281,7 +282,7 @@ export default function Portfolio() {
       github: "https://github.com/Msundara19/Home_appliance_control",
       icon: "🤚",
       caseStudy: {
-        businessImpact: "~15% of adults have some form of motor impairment. This system enables touchless smart home control on a ~$75 Raspberry Pi 4 — vs $500–$1000+ commercial AAC devices — with full privacy (no cloud video transmission), 33ms latency, and 15 gesture-to-MQTT action mappings covering the most common home automation use cases.",
+        businessImpact: "Industry context: ~15% of adults have some form of motor impairment. This system enables touchless smart home control on a ~$75 Raspberry Pi 4 — vs $500–$1000+ commercial AAC devices — delivering 33ms latency, full on-device privacy, and 15 gesture-to-MQTT action mappings at a fraction of the cost of existing solutions.",
         challenge: "Motor-impaired individuals struggle with traditional IoT controls. Existing gesture systems require expensive hardware or cloud connectivity, raising privacy concerns and adding latency.",
         approach: "Deployed MediaPipe on Raspberry Pi 4 for on-device inference. Implemented custom gesture recognition with 15 control commands for voice assistants and home automation. Optimized pipeline for real-time performance with sub-100ms latency. Integrated with MQTT for IoT device control. Privacy-first design with no cloud dependency.",
         results: ["95%+ gesture recognition accuracy", "33ms median latency (below 150ms human perception threshold)", "< $100 hardware cost (Raspberry Pi 4) vs $500+ commercial AAC devices", "15 MQTT-mapped gestures for full smart home control"],
@@ -304,7 +305,7 @@ export default function Portfolio() {
       github: "https://github.com/Msundara19/Power_Load_predictor",
       icon: "⚡",
       caseStudy: {
-        businessImpact: "For a mid-size utility serving 100k customers, even a 1% improvement in load forecasting accuracy translates to $1–5M annually in reduced spinning reserve costs and avoided peak power purchases. A 45% MAPE reduction represents a step-change in forecast quality with direct operating expense implications for any grid operator.",
+        businessImpact: "Industry context: for a mid-size utility serving 100k customers, a 1% improvement in load forecasting accuracy translates to $1–5M annually in reduced spinning reserve costs. This project achieved a 45% MAPE reduction vs ARIMA — a step-change in forecast quality with direct operating expense implications for any grid operator.",
         challenge: "Power grids face inefficiency due to poor demand forecasting. Traditional statistical models (ARIMA) fail to capture complex patterns in consumption data, leading to wastage or shortfalls.",
         approach: "Engineered features from 4.5M+ records including lag variables, rolling averages, and temporal patterns. Implemented XGBoost with hyperparameter tuning. Performed extensive EDA to identify consumption patterns. Compared vs ARIMA, LSTM baselines.",
         results: ["45% MAPE reduction vs ARIMA baseline", "4.5M+ records processed with 30+ engineered features", "Outperforms both ARIMA and LSTM on this dataset", "Deployment-ready XGBoost pipeline"],
@@ -368,7 +369,7 @@ export default function Portfolio() {
       featured: true,
       name: "FastInfer - ML Inference Optimizer",
       shortDesc: "2.3× throughput on Apple Silicon with layered optimization",
-      description: "Production ML inference API for ResNet-50 on Apple Silicon. Stacks ONNX, CoreML FP16, static batching, Redis caching, and multi-worker serving—each benchmark measured independently. Deployed live on Railway.",
+      description: "Production ML inference API for ResNet-50 on Apple Silicon (M5). Stacks ONNX, CoreML FP16, static batching, Redis caching, and multi-worker serving — each optimization benchmarked independently. Benchmarks are Apple Silicon-specific; the methodology (layered profiling, preprocessing as bottleneck) applies to any inference stack. Deployed live on Railway.",
       tags: ["ONNX", "CoreML", "FastAPI", "Apple Silicon"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
       github: "https://github.com/Msundara19/fastinfer",
@@ -397,7 +398,7 @@ export default function Portfolio() {
       period: "Mar 2026 - Present",
       location: "Remote · Full-time",
       description: "Designed and shipped a 5-agent AI workforce (\"Digital Employee\") platform targeting 90% reduction in manual sales prospecting time across Zoo, Sports, Trucking, and SMB verticals — replacing a fully manual outbound process with autonomous pipeline orchestration.",
-      achievements: ["90% reduction in manual prospecting", "50 AI-personalized emails/day", "100 geo-qualified leads/run", "Sub-second voice AI latency"],
+      achievements: ["Targeting 90% reduction in prospecting", "50 AI-personalized emails/day", "100 geo-qualified leads/run", "Sub-second voice AI latency"],
       bullets: [
         "Designed 5-agent AI workforce (GPT-4o) for autonomous lead generation across Zoo, Sports, Trucking, and SMB verticals — replacing a fully manual outbound process with zero human involvement in prospecting",
         "Built GPT-4o lead scoring engine (0–100 fit/intent score) auto-routing high-value leads (≥60) into GoHighLevel CRM — eliminating manual triage and ensuring reps focus only on conversion-ready prospects",
@@ -408,7 +409,7 @@ export default function Portfolio() {
         "Engineered 5 n8n workflows covering real-time lead scoring on ingestion, CRM handoff, and daily email campaign scheduler dispatching up to 50 AI-personalized outreach emails/day with 3-day automated follow-up via SendGrid",
         "Wrote pytest integration test suite validating Google Maps client, location filter accuracy, and Haversine distance calculations within ±10% tolerance against ground truth"
       ],
-      businessImpact: "Replaced a fully manual outbound sales process with an autonomous AI pipeline — the 5-agent system targets 90% reduction in prospecting time, equivalent to a team of 5 competing with a 20-person manual SDR operation. The 50 AI-personalized emails/day with automated follow-up sequencing scale outreach volume with zero additional headcount. The geo-qualification filter (50-mile radius) ensures reps only receive actionable local prospects, eliminating wasted follow-up on non-serviceable leads.",
+      businessImpact: "Replacing a fully manual outbound sales process with an autonomous AI pipeline — the 5-agent system is designed to target a 90% reduction in prospecting time (design target, not yet measured), enabling a team of 5 to compete with a 20-person manual SDR operation. The 50 AI-personalized emails/day with automated follow-up sequencing scale outreach volume with zero additional headcount. The geo-qualification filter (50-mile radius) ensures reps only receive actionable local prospects, eliminating wasted follow-up on non-serviceable leads.",
       icon: "🏈"
     },
     {
@@ -416,16 +417,19 @@ export default function Portfolio() {
       company: "Wallet Wealth LLP",
       period: "Jun 2023 - Jul 2024",
       location: "Chennai, Tamil Nadu, India · Full-time",
-      description: "Developed core features for Wallet Wealth's AI-powered financial advisory platform — full-stack solutions integrating LLM capabilities with client management to deliver personalized wealth advisory services.",
-      achievements: ["Sub-3s LLM query response", "~40% API cost reduction via caching", "Multi-provider LLM routing (Groq + OpenAI)", "Deployed to live client-facing platform"],
+      description: "Built the complete digital platform for a SEBI-registered RIA (INA000020998) serving 500+ client families — 15+ pages, 9 API routes, 8 financial calculators, 5 lead generation funnels, live AMFI fund search (10,000+ schemes), and a SEBI/AMFI-compliant backend.",
+      achievements: ["5 lead conversion funnels built", "9 API routes + 8 calculators", "10,000+ live AMFI schemes", "SEBI/AMFI compliant"],
       bullets: [
-        "Engineered full-stack platform with React + FastAPI, JWT auth, and WebSocket for real-time client-advisor communication on a live client-facing platform",
-        "Architected multi-provider LLM integration via LangChain — seamless Groq/OpenAI switching with automatic fallback, achieving <3s response times across both providers",
-        "Built CRM module tracking client portfolios, full interaction history, and personalized financial recommendations tailored to individual risk profiles",
-        "Designed conversational AI with context-aware memory, referencing prior portfolio details and client interactions across sessions — matching the continuity a human advisor provides",
-        "Implemented Redis caching for frequent query patterns, reducing LLM API costs ~40% while maintaining response quality — directly improving unit economics on a subscription platform"
+        "Built 5 lead generation funnels: Investor Quiz (8-question profiler → 8 investor archetypes → Supabase CRM + advisor email alert), Tools-to-Consultation (8 calculators with booking CTA), AMFI Fund Research-to-Advisor, AI Chat-to-Booking (global widget on every page), and Blog/YouTube newsletter capture",
+        "Engineered 8 interactive financial calculators (Dream Home, Retirement, Education, Marriage, SIP vs Lumpsum, Tax, Crorepati, Emergency Fund) — each ending with a 'Get personalized plan' CTA routing to advisor booking",
+        "Built live AMFI mutual fund search across 10,000+ schemes with paginated NAV data and PPF vs ELSS comparator, backed by GET /api/funds and /api/fund/[schemeCode] routes",
+        "Shipped 9 REST API routes: quiz lead capture (→ Supabase + email alert), rate-limited contact form (Upstash Redis), streaming AI chat (Groq LLaMA 3.3 70B with session context), SIP computation engine, fund NAV data, newsletter subscription, and authenticated CRM dashboard",
+        "Architected multi-provider LLM chat via LangChain — Groq/OpenAI fallback with <3s response; Redis caching of frequent queries cut API costs ~40%",
+        "Implemented full SEBI/AMFI compliance layer: 3-tier grievance escalation (direct → SEBI SCORES → SmartODR), CSRF protection, Zod input validation at all API boundaries, Upstash Redis rate limiting, investor charter, and RIA vs MFD fiduciary disclosure page",
+        "Integrated 8 third-party services: Supabase (magic-link auth + CRM), Groq, Nodemailer/Gmail SMTP, AMFI India API (live NAV), Upstash Redis, Google Analytics 4, YouTube RSS feed (1-hr cache), and SmartODR",
+        "Built authenticated client dashboard — CRM portal showing personalized quiz history and advisor advice for client retention alongside the 5-funnel acquisition system"
       ],
-      businessImpact: "~40% reduction in LLM API costs through Redis caching directly compressed operating cost per active user on a live platform. Multi-provider LLM routing (Groq/OpenAI) ensured zero client-visible downtime from single-vendor outages — delivering the reliability a client-facing financial product requires. Sub-3s query response time exceeds the 3–5s patience threshold where financial advisory users drop off, directly supporting user retention.",
+      businessImpact: "Built the entire client acquisition and retention engine for a regulated financial advisory business (SEBI Reg. INA000020998, 500+ families, 40+ AMCs, 10+ years operating). Every page funnels toward a consultation booking — quiz profiling, calculator CTAs, fund search, AI chat, and content marketing all feed the advisor pipeline. The SEBI/AMFI compliance layer (investor charter, grievance escalation, fiduciary disclosure) made the platform audit-ready — a hard requirement for a SEBI-licensed advisory firm. ~40% API cost reduction from Redis caching directly maintained profitability of the AI chat feature at scale.",
       github: "https://github.com/Msundara19/LLM-wealth-advisor",
       icon: "💰"
     },
@@ -598,7 +602,7 @@ export default function Portfolio() {
     "LLMs & GenAI": ["LangChain", "LangGraph", "RAG", "Prompt Engineering", "APIs", "HuggingFace Transformers"],
     "Computer Vision": ["OpenCV", "MediaPipe", "Image Segmentation", "Object Detection", "Image Processing"],
     "MLOps": ["Docker", "FastAPI", "Streamlit", "Flask", "Model Serving", "REST APIs", "WebSocket", "Model Deployment"],
-    "Cloud": ["AWS (EC2, S3, Lambda)", "Vercel", "Git/GitHub"],
+    "Cloud": ["Railway", "Vercel", "Render", "Supabase", "Git/GitHub"],
     "Data": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter", "Data Pipeline", "Feature Engineering", "Data Preprocessing"],
     "Hardware": ["FPGA (Vitis HLS, PYNQ)", "Raspberry Pi", "Model Quantization", "Hardware Acceleration"]
   };
@@ -722,7 +726,7 @@ export default function Portfolio() {
               Hi, I'm Meenakshi
             </h1>
             <p className="animate-name-delay text-lg sm:text-xl md:text-2xl font-semibold mb-1 gradient-text">
-              AI/ML Systems Engineer
+              AI/ML Engineer
             </p>
             <p className={`animate-name-delay-2 text-sm sm:text-base mb-5 leading-relaxed ${darkMode ? 'text-zinc-200' : 'text-zinc-600'}`}>
               I build ML systems that work under real-world pressure — inference pipelines, hardware accelerators, computer vision, and LLM-powered products at production scale.
@@ -763,10 +767,10 @@ export default function Portfolio() {
                 <span className="font-mono text-xs text-cyan-400 font-medium">00.</span> About
               </h2>
               <p className={`text-sm leading-relaxed mb-3 ${darkMode ? 'text-zinc-200' : 'text-zinc-600'}`}>
-                I'm an AI/ML Systems Engineer who builds the infrastructure that makes machine learning work in the real world — not just in notebooks. My focus is the full stack from model training and optimization to production deployment: inference pipelines, hardware acceleration, LLM orchestration, and computer vision systems.
+                I'm an AI/ML Engineer who builds the infrastructure that makes machine learning work in the real world — not just in notebooks. My focus is the full stack from model training and optimization to production deployment: inference pipelines, hardware acceleration, LLM orchestration, and computer vision systems.
               </p>
               <p className={`text-sm leading-relaxed mb-3 ${darkMode ? 'text-zinc-200' : 'text-zinc-600'}`}>
-                Having pursued a Master's in AI for Computer Vision at Illinois Tech, I've shipped systems that operate under real constraints. A fraud detection API with sub-5s latency. A wound monitoring platform with clinical-grade CV analysis. An LLM financial advisor with multi-provider routing and RAG retrieval. A VGG network accelerated 49.8× on FPGA with INT16 quantization. ML inference optimized 2.3× on Apple Silicon. Published in IEEE.
+                Having pursued a Master's in AI for Computer Vision at Illinois Tech, I've shipped systems that operate under real constraints. A fraud detection API with sub-5s latency. A wound monitoring platform built on clinical assessment criteria. A full digital advisory platform for a SEBI-registered financial firm with 5 conversion funnels and AMFI compliance. A VGG network accelerated 49.8× on FPGA with INT16 quantization. ML inference optimized 2.3× on Apple Silicon. Published in IEEE.
               </p>
               <p className={`text-sm leading-relaxed ${darkMode ? 'text-zinc-200' : 'text-zinc-600'}`}>
                 What drives me is the constraint layer — strict latency budgets, edge hardware limits, scalability pressure. When you can't just add more compute, you have to engineer something genuinely efficient.
