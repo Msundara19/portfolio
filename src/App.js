@@ -1006,7 +1006,7 @@ export default function Portfolio() {
                     {failedImages[featured.name] ? (
                     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-zinc-800 to-zinc-900"><span className="text-5xl">{featured.icon}</span></div>
                   ) : (
-                    <img src={featured.image} alt={featured.name} loading="eager" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onError={() => setFailedImages(p => ({...p, [featured.name]: true}))} />
+                    <img src={featured.image} alt={featured.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onError={() => setFailedImages(p => ({...p, [featured.name]: true}))} />
                   )}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/40 hidden sm:block"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent sm:hidden"></div>
@@ -1047,7 +1047,7 @@ export default function Portfolio() {
                   {failedImages[project.name] ? (
                     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-zinc-800 to-zinc-900"><span className="text-4xl">{project.icon}</span></div>
                   ) : (
-                    <img src={project.image} alt={project.name} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onError={() => setFailedImages(p => ({...p, [project.name]: true}))} />
+                    <img src={project.image} alt={project.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onError={() => setFailedImages(p => ({...p, [project.name]: true}))} />
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                   <div className={`absolute top-2 left-2 w-7 h-7 rounded-lg flex items-center justify-center text-sm ${darkMode ? 'bg-zinc-800/80' : 'bg-white/80'} backdrop-blur-sm`}>{project.icon}</div>
@@ -1257,7 +1257,7 @@ export default function Portfolio() {
               {failedImages[selectedProject.name] ? (
                 <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-zinc-800 to-zinc-900"><span className="text-6xl">{selectedProject.icon}</span></div>
               ) : (
-                <img src={selectedProject.image} alt={selectedProject.name} loading="lazy" className="w-full h-full object-cover" onError={() => setFailedImages(p => ({...p, [selectedProject.name]: true}))} />
+                <img src={selectedProject.image} alt={selectedProject.name} className="w-full h-full object-cover" onError={() => setFailedImages(p => ({...p, [selectedProject.name]: true}))} />
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
               <button onClick={() => setSelectedProject(null)} className="absolute top-2 right-2 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white">
