@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
+const subtitles = ["AI/ML Engineer", "RAG Systems Builder", "Inference Optimizer", "Full-Stack ML Engineer"];
+const coreSkills = ["Python", "PyTorch", "FastAPI", "LangChain", "RAG", "OpenCV", "PostgreSQL", "Docker", "React", "TypeScript"];
+
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(true);
   const [activeSection, setActiveSection] = useState('home');
@@ -14,9 +17,6 @@ export default function Portfolio() {
   const [typeState, setTypeState] = useState({ text: 'AI/ML Engineer', idx: 0, deleting: false });
   const [animatedCounters, setAnimatedCounters] = useState([0, 0, 0, 0]);
   const [failedImages, setFailedImages] = useState({});
-
-  const subtitles = ["AI/ML Engineer", "RAG Systems Builder", "Inference Optimizer", "Full-Stack ML Engineer"];
-  const coreSkills = ["Python", "PyTorch", "FastAPI", "LangChain", "RAG", "OpenCV", "PostgreSQL", "Docker", "React", "TypeScript"];
 
   const email = "msridharansundaram@hawk.illinoistech.edu";
 
