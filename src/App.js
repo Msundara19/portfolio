@@ -302,6 +302,7 @@ export default function Portfolio() {
       description: "Production-grade RAG system for PDF Q&A with structure-aware chunking, hybrid BM25+vector retrieval via Reciprocal Rank Fusion, explainable confidence scoring, and a similarity gate that blocks LLM calls on out-of-scope queries — eliminating hallucination by design.",
       tags: ["ASP.NET Core", "RAG", "pgvector", "React"],
       image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800",
+      github: "https://github.com/Msundara19/SmartDoc",
       live: "https://smart-doc-chi.vercel.app",
       icon: "📄",
       caseStudy: {
