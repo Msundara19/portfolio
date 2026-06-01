@@ -778,14 +778,14 @@ export default function Portfolio() {
             </p>
 
             {/* Stat bar */}
-            <div className="flex flex-wrap gap-5 sm:gap-8 mb-5 justify-center lg:justify-start">
+            <div className="grid grid-cols-2 gap-x-8 gap-y-3 sm:flex sm:flex-wrap sm:gap-8 mb-5">
               {[
                 { value: animatedCounters[0], suffix: "+", label: "projects shipped" },
                 { value: animatedCounters[1], suffix: "",  label: "IEEE paper" },
                 { value: animatedCounters[2], suffix: "%", label: "ML accuracy" },
                 { value: animatedCounters[3], suffix: "",  label: "production roles" },
               ].map((s, i) => (
-                <div key={i} className="text-center lg:text-left">
+                <div key={i} className="text-center sm:text-left">
                   <div className="text-xl sm:text-2xl font-bold gradient-text tabular-nums">{s.value}{s.suffix}</div>
                   <div className={`text-xs ${darkMode ? 'text-zinc-500' : 'text-zinc-400'}`}>{s.label}</div>
                 </div>
@@ -878,8 +878,9 @@ export default function Portfolio() {
           {/* Career Timeline */}
           <div className={`mt-8 pt-5 border-t reveal ${darkMode ? 'border-zinc-800/60' : 'border-zinc-200'}`}>
             <h3 className={`text-xs font-semibold uppercase tracking-widest mb-5 ${darkMode ? 'text-zinc-500' : 'text-zinc-400'}`}>Journey</h3>
+            <div className="relative">
             <div className="overflow-x-auto scrollbar-hide -mx-1 px-1">
-              <div className="relative" style={{ minWidth: '520px' }}>
+              <div className="relative" style={{ minWidth: '580px' }}>
                 <div className={`absolute top-[5px] left-[5%] right-[5%] h-px ${darkMode ? 'bg-zinc-800' : 'bg-zinc-200'}`}></div>
                 <div className="flex justify-between">
                   {[
@@ -891,13 +892,15 @@ export default function Portfolio() {
                   ].map((ev, i) => (
                     <div key={i} className="flex flex-col items-center text-center w-[18%]">
                       <div className={`w-3 h-3 rounded-full mb-2 relative z-10 flex-shrink-0 ${ev.current ? 'bg-cyan-400' : ev.edu ? (darkMode ? 'bg-indigo-500' : 'bg-indigo-400') : (darkMode ? 'bg-cyan-600' : 'bg-cyan-500')} ${ev.current ? (darkMode ? 'shadow-[0_0_6px_rgba(34,211,238,0.6)]' : 'shadow-[0_0_6px_rgba(6,182,212,0.5)]') : ''}`}></div>
-                      <p className={`font-mono text-[10px] leading-tight ${darkMode ? 'text-zinc-500' : 'text-zinc-400'}`}>{ev.period}</p>
+                      <p className={`font-mono text-xs leading-tight ${darkMode ? 'text-zinc-500' : 'text-zinc-400'}`}>{ev.period}</p>
                       <p className={`text-xs font-semibold leading-tight mt-0.5 ${darkMode ? 'text-zinc-200' : 'text-zinc-700'}`}>{ev.label}</p>
-                      <p className={`text-[10px] leading-tight mt-0.5 ${ev.edu ? (darkMode ? 'text-indigo-400' : 'text-indigo-600') : (darkMode ? 'text-cyan-400' : 'text-cyan-600')}`}>{ev.org}</p>
+                      <p className={`text-xs leading-tight mt-0.5 ${ev.edu ? (darkMode ? 'text-indigo-400' : 'text-indigo-600') : (darkMode ? 'text-cyan-400' : 'text-cyan-600')}`}>{ev.org}</p>
                     </div>
                   ))}
                 </div>
               </div>
+            </div>
+            <div className={`absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l to-transparent pointer-events-none sm:hidden ${darkMode ? 'from-black' : 'from-zinc-50'}`}></div>
             </div>
           </div>
         </div>
@@ -999,7 +1002,7 @@ export default function Portfolio() {
             return featured ? (
               <div className={`mb-5 group rounded-xl overflow-hidden cursor-pointer border transition-all hover:border-cyan-500/40 ${darkMode ? 'bg-zinc-900 border-zinc-800' : 'bg-white border-zinc-200 shadow-xl'}`} onClick={() => setSelectedProject(featured)}>
                 <div className="flex flex-col sm:flex-row">
-                  <div className="relative sm:w-72 h-48 sm:h-auto flex-shrink-0 overflow-hidden">
+                  <div className="relative sm:w-72 h-36 sm:h-auto flex-shrink-0 overflow-hidden">
                     {failedImages[featured.name] ? (
                     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-zinc-800 to-zinc-900"><span className="text-5xl">{featured.icon}</span></div>
                   ) : (
