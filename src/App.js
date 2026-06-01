@@ -167,7 +167,7 @@ export default function Portfolio() {
 
   useEffect(() => {
     if (isLoading) return;
-    const targets = [10, 1, 500, 3];
+    const targets = [10, 1, 91, 3];
     const duration = 1800;
     const start = Date.now();
     let raf;
@@ -203,7 +203,7 @@ export default function Portfolio() {
       shortDesc: "Real-time fraud detection across multiple platforms",
       description: "AI-powered fraud detection system for e-commerce using FastAPI and Groq LLM. Analyzes products across Google Shopping and eBay with statistical anomaly detection, achieving <5s response time and 95%+ precision.",
       tags: ["FastAPI", "Groq LLM", "ML", "REST API"],
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=70&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800",
       github: "https://github.com/Msundara19/Trustcart",
       live: "https://web-production-e61ac.up.railway.app/",
       icon: "🛡️",
@@ -227,7 +227,7 @@ export default function Portfolio() {
       shortDesc: "Patient-facing wound monitoring — the only tool in a clinician-only market",
       description: "The only patient-facing wound monitoring tool in a market dominated by B2B clinician platforms (WoundGenius, eKare, Minuteful). Fine-tuned EfficientNet-B0 (91.5% accuracy, 0.989 macro AUC) on 7 wound types, multi-stage OpenCV segmentation, confidence-gated inference, wound-type-aware LLM prompts, and dual-provider fallback — translating CV metrics into plain-English healing guidance patients can act on at home.",
       tags: ["PyTorch", "EfficientNet-B0", "OpenCV", "Groq LLM"],
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=70&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800",
       github: "https://github.com/Msundara19/meditrack-v2",
       live: "https://meditrack-v2.streamlit.app",
       icon: "🏥",
@@ -252,7 +252,7 @@ export default function Portfolio() {
       shortDesc: "49.8x faster CNN inference on edge hardware",
       description: "ReducedVGG CNN for CIFAR-10 with 85.69% accuracy using INT16 quantization. Accelerated inference by 49.8x on Zynq-7020 FPGA.",
       tags: ["FPGA", "Vitis HLS", "PyTorch", "Quantization"],
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=70&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800",
       github: "https://github.com/Msundara19/fpga_cnn_accelerator",
       icon: "⚡",
       caseStudy: {
@@ -275,7 +275,7 @@ export default function Portfolio() {
       shortDesc: "15 pages · 9 APIs · 5 funnels · SEBI-compliant · 10,000+ AMFI schemes",
       description: "Full-stack financial advisory platform for a SEBI-registered RIA (INA000020998) serving 500+ families — 15+ pages, 9 API routes, 8 financial calculators, 5 lead conversion funnels, live AMFI fund search (10,000+ schemes), Groq LLaMA 3.3 70B AI chat, and a SEBI/AMFI-compliant backend.",
       tags: ["Next.js", "Supabase", "LangChain", "AMFI API"],
-      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=70&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800",
       github: "https://github.com/Msundara19/LLM-wealth-advisor",
       live: "https://llm-wealth-advisor.vercel.app/",
       icon: "💰",
@@ -301,7 +301,7 @@ export default function Portfolio() {
       shortDesc: "Production RAG with confidence scoring and zero hallucination",
       description: "Production-grade RAG system for PDF Q&A with structure-aware chunking, hybrid BM25+vector retrieval via Reciprocal Rank Fusion, explainable confidence scoring, and a similarity gate that blocks LLM calls on out-of-scope queries — eliminating hallucination by design.",
       tags: ["ASP.NET Core", "RAG", "pgvector", "React"],
-      image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=70&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800",
       live: "https://smart-doc-chi.vercel.app",
       icon: "📄",
       caseStudy: {
@@ -325,7 +325,7 @@ export default function Portfolio() {
       shortDesc: "95%+ accuracy gesture recognition with 33ms latency",
       description: "MediaPipe-based gesture control system for IoT devices. Enables touchless home automation on Raspberry Pi—addressing accessibility needs for motor-impaired users with real-time performance.",
       tags: ["MediaPipe", "Raspberry Pi", "Edge AI", "IoT"],
-      image: "https://images.unsplash.com/photo-1593376893114-1aed528d80cf?w=800&q=70&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1593376893114-1aed528d80cf?w=800",
       github: "https://github.com/Msundara19/Home_appliance_control",
       icon: "🤚",
       caseStudy: {
@@ -348,7 +348,7 @@ export default function Portfolio() {
       shortDesc: "45% error reduction in power prediction",
       description: "XGBoost-based time series forecasting for smart grid optimization. Analyzed 4.5M+ records to predict electricity demand—reducing MAPE by 45% vs baseline ARIMA.",
       tags: ["XGBoost", "Time Series", "Python", "Smart Grid"],
-      image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=70&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800",
       github: "https://github.com/Msundara19/Power_Load_predictor",
       icon: "⚡",
       caseStudy: {
@@ -371,7 +371,7 @@ export default function Portfolio() {
       shortDesc: "MobileNetV1-SSD-lite with +2.4% mAP on PASCAL VOC",
       description: "Implemented and optimized MobileNetV1-SSD-lite for real-time 2D object detection on PASCAL VOC 2012. Applied AMP training, cosine LR scheduling, and architectural modifications—improving mAP from 45.86% to 47.26% and FPS from 138 to 145.",
       tags: ["PyTorch", "SSD", "Object Detection", "Computer Vision"],
-      image: "https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=800&q=70&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=800",
       live: "/Computer_vision_technical_documentation.pdf",
       icon: "🎯",
       caseStudy: {
@@ -394,7 +394,7 @@ export default function Portfolio() {
       shortDesc: "VMs to Kubernetes — Docker, Cassandra, microservices",
       description: "End-to-end distributed systems project covering containerization, orchestration, and distributed databases. Built fault-tolerant microservices with Docker Compose, deployed Cassandra clusters with tunable consistency, and orchestrated workloads on Kubernetes.",
       tags: ["Docker", "Kubernetes", "Cassandra", "Microservices"],
-      image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&q=70&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800",
       live: "/Cloud_computing_technical_document.pdf",
       icon: "☁️",
       caseStudy: {
@@ -417,7 +417,7 @@ export default function Portfolio() {
       shortDesc: "2.3× throughput on Apple Silicon with layered optimization",
       description: "Production ML inference API for ResNet-50 on Apple Silicon (M5). Stacks ONNX, CoreML FP16, static batching, Redis caching, and multi-worker serving — each optimization benchmarked independently. Benchmarks are Apple Silicon-specific; the methodology (layered profiling, preprocessing as bottleneck) applies to any inference stack. Deployed live on Railway.",
       tags: ["ONNX", "CoreML", "FastAPI", "Apple Silicon"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=70&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
       github: "https://github.com/Msundara19/fastinfer",
       live: "https://fastinfer-production.up.railway.app",
       icon: "🚀",
@@ -781,7 +781,7 @@ export default function Portfolio() {
               {[
                 { value: animatedCounters[0], suffix: "+", label: "projects shipped" },
                 { value: animatedCounters[1], suffix: "",  label: "IEEE paper" },
-                { value: animatedCounters[2], suffix: "+", label: "families served" },
+                { value: animatedCounters[2], suffix: "%", label: "ML accuracy" },
                 { value: animatedCounters[3], suffix: "",  label: "production roles" },
               ].map((s, i) => (
                 <div key={i} className="text-center lg:text-left">
