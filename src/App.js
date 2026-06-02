@@ -16,7 +16,6 @@ export default function Portfolio() {
   const [chatInput, setChatInput] = useState('');
   const [typeState, setTypeState] = useState({ text: 'AI/ML Engineer', idx: 0, deleting: false });
   const [animatedCounters, setAnimatedCounters] = useState([0, 0, 0, 0]);
-  const [failedImages, setFailedImages] = useState({});
 
   const email = "msridharansundaram@hawk.illinoistech.edu";
 
@@ -1003,11 +1002,7 @@ export default function Portfolio() {
               <div className={`mb-5 group rounded-xl overflow-hidden cursor-pointer border transition-all hover:border-cyan-500/40 ${darkMode ? 'bg-zinc-900 border-zinc-800' : 'bg-white border-zinc-200 shadow-xl'}`} onClick={() => setSelectedProject(featured)}>
                 <div className="flex flex-col sm:flex-row">
                   <div className="relative sm:w-72 h-36 sm:h-auto flex-shrink-0 overflow-hidden">
-                    {failedImages[featured.name] ? (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-zinc-800 to-zinc-900"><span className="text-5xl">{featured.icon}</span></div>
-                  ) : (
-                    <img src={featured.image} alt={featured.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onError={() => setFailedImages(p => ({...p, [featured.name]: true}))} />
-                  )}
+                    <img src={featured.image} alt={featured.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/40 hidden sm:block"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent sm:hidden"></div>
                     <div className="absolute top-3 left-3 flex items-center gap-2">
@@ -1044,11 +1039,7 @@ export default function Portfolio() {
             {projects.filter(p => !p.featured && (activeFilter === 'All' || p.category === activeFilter)).map((project, idx) => (
               <div key={idx} className={`group rounded-xl overflow-hidden transition-all hover:scale-[1.02] cursor-pointer ${darkMode ? 'bg-zinc-900 border border-zinc-800 hover:border-zinc-700' : 'bg-white border border-zinc-200 shadow-xl'}`} onClick={() => setSelectedProject(project)}>
                 <div className="relative h-32 sm:h-36 overflow-hidden">
-                  {failedImages[project.name] ? (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-zinc-800 to-zinc-900"><span className="text-4xl">{project.icon}</span></div>
-                  ) : (
-                    <img src={project.image} alt={project.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onError={() => setFailedImages(p => ({...p, [project.name]: true}))} />
-                  )}
+                  <img src={project.image} alt={project.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                   <div className={`absolute top-2 left-2 w-7 h-7 rounded-lg flex items-center justify-center text-sm ${darkMode ? 'bg-zinc-800/80' : 'bg-white/80'} backdrop-blur-sm`}>{project.icon}</div>
                   <span className={`absolute top-2 right-2 px-1.5 py-0.5 rounded text-xs font-medium ${darkMode ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/90 text-cyan-700'} backdrop-blur-sm`}>{project.category}</span>
@@ -1254,11 +1245,7 @@ export default function Portfolio() {
           <div className="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
           <div className={`relative w-full sm:max-w-3xl max-h-[95vh] sm:max-h-[90vh] overflow-y-auto rounded-t-2xl sm:rounded-2xl ${darkMode ? 'bg-zinc-900' : 'bg-white'}`} onClick={(e) => e.stopPropagation()}>
             <div className="relative h-40 sm:h-48">
-              {failedImages[selectedProject.name] ? (
-                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-zinc-800 to-zinc-900"><span className="text-6xl">{selectedProject.icon}</span></div>
-              ) : (
-                <img src={selectedProject.image} alt={selectedProject.name} className="w-full h-full object-cover" onError={() => setFailedImages(p => ({...p, [selectedProject.name]: true}))} />
-              )}
+              <img src={selectedProject.image} alt={selectedProject.name} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
               <button onClick={() => setSelectedProject(null)} className="absolute top-2 right-2 w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center text-white">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/></svg>
